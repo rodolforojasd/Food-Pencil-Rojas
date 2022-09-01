@@ -1,0 +1,347 @@
+/*discrete palette :https://mycolor.space/?hex=%230A0908&sub=1
+
+
+                */
+
+:root{
+/*Colors*/
+--alternate-color: #0A0908;
+--footer-color: #C8C8C7;
+--highlight: #C18522;
+--primary-color:#FFF8EC;
+
+
+/*Font-family*/
+--font-body: 'Poppins', sans-serif;
+
+ /* Font-sizes */
+ --text-large: 5.2em;
+ --text-medium: 2.2em;
+ --text-base: 1.6em;
+ --text-small: 1.4em;
+}
+
+/*Global Styles*/
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+ 
+}
+
+html{
+  font-size: 62.5%;
+}
+
+
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  font-family: var(--font-body);
+  color:var(--alternate-color);
+}
+
+img{
+  width: 100%;
+}
+
+.grid-container{
+  display:grid;
+  height: auto;
+  max-width:100vw;
+  grid-template-areas: 
+  "header"
+  "nav"
+  "main"
+  "footer";
+  grid-template-rows:auto auto 4fr 1fr;
+  grid-template-columns:auto;
+  font-family: var(--font-body);
+  color:var((--alternate-color));
+  row-gap: 0px;
+}
+
+
+
+.header-area{
+  align-content:stretch;
+  background-color: #FFF8EC;
+  column-gap: 0px;
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+  grid-area:header;
+  position:sticky;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+.header-area_logo{
+  display:flex;
+  justify-content: center;
+  flex-wrap:nowrap;
+  align-self: center;
+  padding-top: 1vh;
+  padding-inline: 1vw;
+
+}
+
+.header-area_navbar{
+  padding-inline: 3vw;
+}
+
+.header-area_navbar, .header-area_navbar-menu {
+  display:flex;
+  justify-content:space-evenly;
+  flex-wrap:nowrap;
+  /*align-self: center;
+  padding-inline: 1vw;*/
+  text-align: center;
+  gap:2vw;
+  
+}
+
+.header-area_secondary-menu, .header-area_secondary-menu{
+  /*text-align: center;*/
+  background-color: #0a0908;
+  color: #FFF8EC;
+}
+
+
+#secondary_navbar-menu{
+ /* display:flex;
+  justify-content: space-around;
+  flex-wrap:nowrap;
+  gap:3rem;*/
+  color: #FFF8EC;
+  
+}
+
+#secondary_navbar-menu li a{
+  color:#FFF8EC
+}
+
+#secondary_navbar-menu  a:hover{
+  color:#C68300
+}
+
+
+
+
+
+
+#hearder_subscribe-form{
+  display:inline-block;
+  margin-bottom: 0px;
+
+}
+
+a:link, a:visited {
+  list-style:none;
+  text-decoration-line:none;
+  text-decoration-color: #0a0908;
+  color:#0a0908;
+}
+
+.header-area_navbar  a:hover{
+  color:#C68300;
+  border-bottom:solid px #C68300;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+  padding-top: 150%;
+}
+
+.header-area_navbar li:hover{
+  border-bottom: #C68300;
+  border-width: 2px; 
+}
+
+.header-area_navbar-wrapper img{
+  height: 15px;
+  align-self: center;
+}
+.header-area_navbar-wrapper img:hover{
+filter: invert(77%) sepia(28%) saturate(290%) hue-rotate(351deg) brightness(87%) contrast(92%);
+}
+
+/*main content styles*/
+ main{
+  grid-area: main;
+ }
+.post_area{
+  display:flex;
+  flex-direction:column;
+}
+
+.title-holder{
+  display:flex;
+  justify-content:center;
+  margin-bottom: 6rem;
+  margin-top: 2rem; 
+}
+
+.post-area_top{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  
+}
+
+.post-area-bottom{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex:2;   
+}
+
+.post-area_top{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex:5; 
+}
+
+.post_area aside{
+flex:1;
+}
+
+
+
+
+.title-holder h2{
+color: #22333b ;
+font-size: 2rem;
+text-align: center;
+}
+
+.post-area-bottom h2{
+  text-align: center;
+  align-self: center;
+}
+
+.title-holder_content-wrapper{
+box-sizing: content-box;
+display: flex;
+flex-direction: column;
+align-content:flex-start;
+}
+
+.title-holder_content-wrapper a:hover{
+  text-decoration: underline;
+  color: #C68300;
+}
+
+.title-holder_image{
+max-height: 500px; 
+min-height: auto;
+width: 380px;
+}
+
+.title-holder_content-wrapper img:hover{
+
+box-shadow:-5px 10px 15px 2px #929291;
+margin-bottom: 5px;
+margin-left:5px;
+}
+
+#latest{
+  border-top: #a2c2d1 solid 5px;
+  background-color: ghostwhite;
+  border-bottom: #a2c2d1 solid 5px;
+}
+
+
+.post-area_top_article img{
+  max-widht:500px ;
+  height: auto;
+}
+
+.post-area-botom_singlepost img{
+  max-width:400px;
+  height: auto;
+}
+
+
+/*footer styles*/
+footer{
+  grid-area: footer;
+}
+.footer-area{
+  
+  background-color:#ebebeb;
+  display:flex;
+  justify-content:space-between;
+  gap: 170px ;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  margin-top: 2rem;
+  margin-left: 2 rem;
+  padding-inline-end: 3.5rem;
+  padding-bottom: 3rem; 
+}
+
+.footer-area_navbar{
+  display:flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 2rem;
+  font-size: small;
+  
+}
+
+#nav-menu ul {
+  list-style-type:none;
+}
+.footer-area_navbar a:hover{
+  color:#C68300;
+  text-decoration: underline;
+  
+}
+
+
+
+
+
+.footer-area_scmdlinks a:hover{
+  filter: invert(77%) sepia(28%) saturate(290%) hue-rotate(351deg) brightness(87%) contrast(92%);
+}
+
+/**/
+
+
+  
+/* propiedades vistas en clase que tengo que utilizar color, font-family,font-style,
+ font-size, text-align, line-height, list-type, text-decoration,
+ 
+ background-color, background-image, backgroun-position, backgroun-size
+ 
+ parallax(ver que es)*/
+
+
+
+ /* Desktop & Ladscape view*/
+@media screen  and (min-widht: 768px) and (orientation:"landscape"){
+ 
+  .grid-container{
+  grid-template-areas: 
+  "header header header"
+  "nav nav nav "
+  "main main aside" 
+  "footer footer footer";
+  grid-template-rows:1fr 1fr 3fr 2fr;
+  grid-template-columns:2fr 2fr 1fr;
+  column-gap: 5px;
+  row-gap: 5px;  
+  height: 100vw;
+  }
+}
+
+
