@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/img/logo/apple&penciicon.png">
+    <link rel="shortcut icon" href="./assets/img/logo/apple&penciicon.png">
+    <script src="scripts/codes.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <title>Food & Pencil</title>
 </head>
-<body class="grid-container">
+<body>
+
     <header class="header-area">
         <div class=header-area_logo>
                 <a href="index.html">
@@ -22,7 +24,7 @@
         <div class="header-area_navbar-section">
             <div class="header-area_navbar-wrapper">
                 <nav class="header-area_navbar">
-                    <ul class="header-area_navbar-menu" id="navbar-menu"> 
+                     <ul class="header-area_navbar-menu"  id="navbar-main-menu"> 
                         <li><a href="pages/food_science.html">Food Science</a></li>
                         <li><a href="pages/recipes.html">Recipes</a></li>
                         <li><a href="pages/equipment.html">Equipment</a></li>
@@ -33,10 +35,8 @@
                 <img src="assets/img/icons/search-icon.svg" alt="search-icon" >
                 <img src="assets/img/icons/news-icon.svg" alt="newsletter-icon" >
                 </nav>
-        </div>
-        
-
-      
+            </div>
+        </div>   
     </header>
 
 
@@ -114,37 +114,44 @@
                 <br>
             </div>
     
-            <div class="footer-area_scmdlinks">
+            
 
-                <nav>
-                    <a href="https://www.instagram.com/">
-                        <img src="assets/img/icons/instagram-icon.svg" alt="instagram_icon" height="32px" widght="32px">
-                    </a>
-                    <a href="https://www.pinterest.com/">
-                        <img src="assets/img/icons/pinterest-icon.svg" alt="pinterest_icon" height="32px" widght="32px">
-                    </a>
-                    <a href="https://www.tiktok.com/">
-                        <img src="assets/img/icons/tik tok icon.svg" alt="tiktok_icon" height="32px" widght="32px">
-                    </a>
-                    <a href="https://www.youtube.com/">
-                        <img src="assets/img/icons/youtube-icon.svg" alt="youtube_icon" height="32px" widght="32px">
-                    </a>
-                    <a href="https://www.reddit.com/">
-                        <img src="assets/img/icons/reddit-icon.svg" alt="reddit_icon" height="32px" widght="32px">
-                    </a>    
-                </nav>
-            </div> 
+                <section class="footer-area_menu">
+
+                            <nav id="scmd-links" class="footer-area_menu-item">
+                                <a href="https://www.instagram.com/">
+                                    <img src="assets/img/icons/instagram-icon.svg" alt="instagram_icon" height="32px" widght="32px">
+                                </a>
+                                <a href="https://www.pinterest.com/">
+                                    <img src="assets/img/icons/pinterest-icon.svg" alt="pinterest_icon" height="32px" widght="32px">
+                                </a>
+                                <a href="https://www.tiktok.com/">
+                                    <img src="assets/img/icons/tik tok icon.svg" alt="tiktok_icon" height="32px" widght="32px">
+                                </a>
+                                <a href="https://www.youtube.com/">
+                                    <img src="assets/img/icons/youtube-icon.svg" alt="youtube_icon" height="32px" widght="32px">
+                                </a>
+                                <a href="https://www.reddit.com/">
+                                    <img src="assets/img/icons/reddit-icon.svg" alt="reddit_icon" height="32px" widght="32px">
+                                </a> 
+                            </nav>
+                        
+<!--Porque me toma el span como primer tipo junto con el nav tuve que poner un span falso. Obviamente esto es mal código pero preguntar despues por que 
+pasa eso y mejorarlo-->
+                            <span class="footer-area_menu-item"><a></a></span>
+<!---->                          
+                            <span class="footer-area_menu-item"><a href="pages/food_science.html">Food Science</a></span>
+                            <span class="footer-area_menu-item"><a href="pages/recipes.html">Recipes</a></span>
+                            <span class="footer-area_menu-item"><a href="pages/equipment.html">Equipment</a></span>
+                            <span class="footer-area_menu-item"><a href="pages/resources.html">Resources</a></span>
+                            <span class="footer-area_menu-item"><a href="pages/contact.html">Contact</a></span> 
+
+                    
+                </section>
+           
     </div>
-    <div class="footer-area_navbar">
-        <span>
-                <p><a href="pages/food_science.html">Food Science</a></p>
-                <p><a href="pages/recipes.html">Recipes</a></p>
-        <p><a href="pages/equipment.html">Equipment</a></p>
-        </span>
-        <span>
-                <p><a href="pages/resources.html">Resources</a></p>
-                <p><a href="pages/contact.html">Contact</a></p>
-        </span>
+    <div >
+
         
     </div>
 </footer>    
