@@ -8,10 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Resources | Food & Pencil</title>
 </head>
-<body class="grid-container">
+<body class="container-fluid"> 
     <header class="header-area">
         <div class=header-area_logo>
                 <a href="../index.html">
@@ -19,32 +21,70 @@
                 </a>
         </div>
 
-        <div class="header-area_navbar-section">
-            <div class="header-area_navbar-wrapper">
-                <nav class="header-area_navbar">
-                    <ul class="header-area_navbar-menu" id="navbar-menu"> 
-                        <li><a href="food_science.html">Food Science</a></li>
-                        <li><a href="recipes.html">Recipes</a></li>
-                        <li><a href="equipment.html">Equipment</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+        <nav  class="navbar navbar-expand-lg bg-light" id="nav-menu" >
+            <div class="container-fluid">
+                <button class="navbar-toggler" id="navbar-toggler-override" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+               <a class="navbar-brand" href="index.html"> 
+                    <img   id="logo-small" src="../assets/img/logo/Small-logo-black-painted.svg"   alt="small logo">
+                </a> 
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" class="header-area_navbar-menu"  id="navbar-main-menu"> 
+                        <li class="nav-item dropdown" class="nav-item">
+                            <a class="nav-link dropdown-toggle " href="../pages/food_science.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Food Science
+                            </a>
+                            <ul class="dropdown-menu" class="secondary-menu"> 
+                                <li class="dropdown-item"><a href="../pages/food_science.html">Basics</a></li>
+                                <li class="dropdown-item"><a href="../pages/food_science.html">Ingredients</a></li>
+                                <li class="dropdown-item"><a href="../pages/food_science.html">Techniques & tips</a></li>
+                                <li class="dropdown-item"><a href="../pages/food_science.html">Nutrition</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="../pages/recipes.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Recipes
+                            </a>
+                            <ul class="dropdown-menu" class="secondary-menu" > 
+                                <li class="dropdown-item"><a href="../pages/recipes.html">Ingredients</a></li>
+                                <li class="dropdown-item"><a href="../pages/recipes.html">Course</a></li>
+                                <li class="dropdown-item"><a href="../pages/recipes.html">Region</a></li>
+                                <li class="dropdown-item"><a href="../pages/recipes.html">Method & tools</a></li>
+                                <li class="dropdown-item"><a href="../pages/recipes.html">Diet</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="../pages/equipment.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Equipment
+                            </a>
+                            <ul class="dropdown-menu" class="secondary-menu"> 
+                                <li class="dropdown-item"><a href="../pages/equipment.html">Cookware</a></li>
+                                <li class="dropdown-item"><a href="../pages/equipment.html">Bakeware</a></li>
+                                <li class="dropdown-item"><a href="../pages/equipment.html">Grill-BBQ</a></li>
+                                <li class="dropdown-item"><a href="../pages/equipment.html">Electric Appliances</a></li>
+                                <li class="dropdown-item"><a href="../pages/equipment.html">knifes</a></li>
+                                <li class="dropdown-item"><a href="../pages/equipment.html">More</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/resources.html">Resources</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
                     </ul>
-
-                <img src="../assets/img/icons/search-icon.svg" alt="search-icon" >
-                <img src="../assets/img/icons/news-icon.svg" alt="newsletter-icon" >
-                </nav>
-
-                
-             
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
+                </div>
             </div>
-        </div>
+
+        </nav>
 
   
     </header>
         
-        <main  class="posts-area">
-            <h1>Resources</h1>
-                <section class="post-area_top" id="resources">
+        <main class="col-sm-12 col-md-6 col-lg-3"> 
+            <h1 id="resources-title">Resources</h1>
+                <section class="post-area_top">
                     <h2>Guides</h2>
                     <article class="post-area_top_article">
                         <h3>Flavor hacks 101</h3>
@@ -137,5 +177,6 @@
         </footer>   
         
     
-</body>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body> 
 </html>
