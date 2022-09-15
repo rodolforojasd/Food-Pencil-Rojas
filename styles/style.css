@@ -162,9 +162,6 @@ border: 1px solid var(--alternate-color);
   text-align: center;
 }
 
-
-
-
 .secondary-menu{
   background-color:var(--alternate-color);
   padding-inline: var(--spacing-small);
@@ -197,7 +194,6 @@ padding: 0px;
   animation-duration: 5s;
   background-color: var(--box-color-grey);
   margin-top: var(--spacing-small);
- 
   justify-content: center;
   text-align: center;
 
@@ -229,12 +225,49 @@ max-height:50vh;
 }
 
 .title-holder_image{
-max-width:60rem;
-height:50vh;
+width:90%;
+height:40vh;
 }
-.post-area_top{
-  margin-top: var(--spacing-large);
- 
+
+.post-area_top_img-area{
+  margin:0px;
+}
+
+
+
+.post-area_top_img {
+width:100%;
+height: 60vh;
+border-radius: 0px 0px 15px 15px;
+padding-left: var(--spacing-xsmall);
+margin-right: auto;
+margin-left: auto;
+}
+
+#food-science-feature-article-text{
+display:block;
+text-align: center;
+
+}
+
+#recipes-science-feature-article-text{
+display:block;
+text-align: center;
+
+}
+
+#equipment-feature-article-text{
+display:block;
+text-align: center;
+border-radius: 15px 15px 0px 0px;
+padding-left: 10px;
+}
+
+
+
+.post-area-bottom-title{
+  margin-top: var(--spacing-small);
+  padding-top: var(--spacing-xsmall);
 }
 
 .post-area-botom_singlepost{
@@ -251,8 +284,10 @@ height:auto;
 
 }
 
+
+
 .single-post_card img{
-  max-width: 30vw;
+ 
   height:auto;  
 }
 
@@ -427,6 +462,12 @@ gap:var(--spacing-large);
     
     /*main content styles*/
     
+
+
+    .title-holder_image{
+      width:100%;
+      height:60vh;  
+    }
     .post-area_top-article{
       display: flex;
       flex-direction: column;
@@ -437,22 +478,44 @@ gap:var(--spacing-large);
       padding: 0;
     }
 
-    .post-area_top img{
-     width:50vh;
-     height: 40vh;
-    }
+    .post-area_top_img {
+      width:100%;
+      height: 60vh;
+      border-radius: 0px 10px 10px 0px;
+      padding-right: calc(var(--bs-gutter-x) * .5);
+      
+      }
 
 
+     #food-science-feature-article-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        }
+        
+      #recipes-science-feature-article-text{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+
+
+    #equipment-feature-article-text{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px 10px 0px 0px;
+      padding-left: 10px;
+          }
     .post-area-botom_singlepost img{
       width: 30rem;
       max-height:auto;  
       }
 
-
-    .card img{
-      width: 33rem;
-      height:auto;  
-      }
 
     /*footer styles*/
     .footer-area{
@@ -556,7 +619,8 @@ gap:var(--spacing-large);
     
     .footer-area_newsletter h3{
       text-align: start;
-      padding-left: var(--spacing-medium); 
+    
+
     }
 
     .footer-area a:hover{
