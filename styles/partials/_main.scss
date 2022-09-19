@@ -1,0 +1,158 @@
+@use "sass:math";
+ .post-area_top_img {
+        width:100%;
+        height: 60vh;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 0;
+    }
+
+
+
+/*Bootsrap overide*/
+
+#food-science-feature-article-text{
+display:block;
+text-align: center;
+background-color: var(--box-color-pink);
+margin-left: 0;
+padding:0;
+}
+
+
+#recipes-science-feature-article-text{
+    background-color: var(--box-color-pink);
+    display:block;
+    text-align: center;
+}
+#equipment-feature-article-text{
+    background-color: var(--box-color-pink);
+    display:block;
+    text-align: center;
+    padding-left: 10px;
+}
+
+
+#building-blocks{
+row-gap: var(--spacing-medium);
+}
+#equipment-manuals{
+row-gap: var(--spacing-medium);
+}
+#more-recipes-row{
+row-gap: var(--spacing-medium);
+}
+#guides-row{
+row-gap: var(--spacing-medium);
+}
+
+
+
+.post-area-bottom{
+    .post-area-bottom_singlepost{
+        margin-bottom: var(--spacing-xsmall);
+        img{
+            max-width: 33vw;
+            height:auto;  
+        }
+    }
+
+}
+
+
+ .post-area-bottom-title{
+    margin-top: var(--spacing-small);
+    padding-top: var(--spacing-xsmall);
+}
+
+
+.single-post_card{
+    text-align: center;
+
+}
+
+
+
+.single-post_card img{  
+    height:auto;  
+}
+
+
+
+
+
+
+/*Contact Page Styles*/
+
+#contac-form{
+    background-color: var(--alternate-color);
+    color:var(--primary-color);
+    fieldset{
+        padding-bottom: var(--spacing-medium);
+    }   
+}
+
+
+@media screen and (min-width: 768px), screen and (orientation: landscape) {
+/*Bootsrap overide*/
+
+    #equipment-feature-article-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+        height: 65vh;
+    }
+
+    #food-science-feature-article-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+        height: 65vh; 
+    }
+
+    #recipes-science-feature-article-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 65vh;
+    }
+
+    .post-area_top_img {
+        width:100%;
+        height:65vh;
+    }
+
+
+    
+
+    #building-blocks{
+    padding-left: var(--spacing-xsmall);
+    padding-right: var(--spacing-xsmall);
+    padding-top: var(--spacing-medium);
+    padding-bottom:var(--spacing-small);
+    background-color: var(--box-color-grey);
+    }
+    #equipment-manuals{
+    padding-left: var(--spacing-xsmall);
+    padding-right: var(--spacing-xsmall);
+    }
+    #more-recipes-row{
+    padding-left: var(--spacing-xsmall);
+    padding-right: var(--spacing-xsmall);
+    padding-top: var(--spacing-medium);
+    padding-bottom:var(--spacing-small);
+    background-color: var(--box-color-grey);
+    }
+    #guides-row{
+     padding-left: var(--spacing-xsmall);
+     padding-right: var(--spacing-xsmall);
+     padding-top: var(--spacing-medium);
+     padding-bottom:var(--spacing-small);
+     background-color: var(--box-color-grey);
+    }
+
+}

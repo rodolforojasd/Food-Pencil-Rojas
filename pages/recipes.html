@@ -15,9 +15,9 @@
 </head>
 <body class="container-fluid"> 
     <header class="header-area">
-        <div class=header-area_logo>
+        <div class="header-area_logo">
                 <a href="../index.html">
-                    <img  id="header-logo" src="../assets/img/logo/food&pencil-vectorlogo.svg" width="100%"   height=70px alt="f&p_logo">
+                    <img  id="logo-big" src="../assets/img/logo/food&pencil-vectorlogo.svg" width="100%"   height=70px alt="f&p_logo">
                 </a>
         </div>
 
@@ -27,8 +27,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                <a class="navbar-brand" href="index.html"> 
-                    <img   id="logo-small" src="../assets/img/logo/Small-logo-black-painted.svg"   alt="small logo">
+                     <img   id="logo-small" src="../assets/img/logo/Small-logo-black-painted.svg"   alt="small logo">
                 </a> 
+                <span id="sign-up-hidden">sign-up</span>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" class="header-area_navbar-menu"  id="navbar-main-menu"> 
                         <li class="nav-item dropdown" class="nav-item">
@@ -84,35 +85,34 @@
 
        
 
-        <main class="row"> 
+        <main> 
             <h1 id="recipes-title">Recipes</h1>
-            <section class="row" class="post-area_top">
 
-                
-                <article class="row" class="post-area_top_article" id="recipes-science-feature-article-text">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                    <h2>Create your own salt flavors!</h2>
-                    <p> Make this jalapeno flavor infused spice bomb right at home</p> 
+            <section class="row" class="post-area_top">
+                <article class="row" class="post-area_top_article">
+                    <div class="col-sm-12 col-md-6 col-lg-6" class="bs-override" id="recipes-science-feature-article-text">
+                        <h2>Create your own salt flavors!</h2>
+                        <h4> Grab some jalapennos and make a flavor infused spice bomb!</h4> 
                     </div>
-                    <figure class="col-sm-12 col-md-6 col-lg-6" class="post-area_top_img-area">
-                        <img class="post-area_top_img" src="../assets/img/post-images/jalapeno-salt.jpg"  alt="jalapeno-salt" height="400" width="280">
+                    <figure class="col-sm-12 col-md-6 col-lg-6"  class="img-container">
+                        <img  class="post-area_top_img" src="../assets/img/post-images/what-to-do-with-a-lot-of-jalapenos.jpg.webp"   alt="jalapeno-salt" >
                     </figure>  
                 </article> 
             </section>  
             
-            <section  class=row class="post-area-bottom">
+            <section  class=row class="post-area-bottom" id="more-recipes-row" >
 
             <section class= "col-sm-12 col-md-6 col-lg-4">
-                    <article   class= "card text-center" class="post-area-botom_singlepost">
+                    <article   class= "card text-center" class="post-area-bottom_singlepost">
 
                                     <img class="" src="../assets/img/post-images/recipe-edamame.jpg" alt="">
 
                             <h3>Japanese Appetizzers</h3>
-                            <p>Edamames,sashimi and more.</p>
+                            <p>Edamames, sashimi and more.</p>
                     </article>
             </section>
                 <section class= "col-sm-12 col-md-6 col-lg-4">    
-                    <article   class= "card text-center" class="post-area-botom_singlepost">
+                    <article   class= "card text-center" class="post-area-bottom_singlepost">
 
                                 <img class="" src="../assets/img/post-images/recipe-gazpacho.jpg" alt="">
 
@@ -122,7 +122,7 @@
                 </section>
 
                 <section class= "col-sm-12 col-md-6 col-lg-4">
-                    <article   class= "card text-center" class="post-area-botom_singlepost">
+                    <article   class= "card text-center" class="post-area-bottom_singlepost">
                             <img class="" src="../assets/img/post-images/recipe-mojito.jpg" alt="">
                             <h3>Classics: Mojito</h3>
                             <p>The basics, and some great twists..</p>
