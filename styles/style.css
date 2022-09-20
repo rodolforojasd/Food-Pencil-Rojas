@@ -90,9 +90,6 @@ a {
   text-decoration: none;
   color: var(--alternate-color);
 }
-a:hover {
-  color: var(--highlight);
-}
 
 /* Bootsrap Overrides */
 .container-fluid {
@@ -123,6 +120,7 @@ a:hover {
   a {
     text-decoration: none;
     color: var(--alternate-color);
+    transition: color 1.2s;
   }
   a:hover {
     color: var(--highlight);
@@ -354,6 +352,8 @@ a:hover {
     gap: var(--spacing-large);
     justify-self: start;
     width: 50vw;
+    transition: filter 4s;
+    transition-timing-function: ease-in-out;
   }
   .footer-area .footer-area_news-logo-smd_wrapper .footer-area_menu #scmd-links a:hover {
     filter: var(--highlight-filter);
@@ -384,6 +384,10 @@ main .title-holder .title-holder_content-wrapper {
 main .title-holder .title-holder_content-wrapper .title-holder_image {
   width: 90%;
   height: 40vh;
+  transition: filter 1.5s;
+}
+main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
+  filter: opacity(0.7);
 }
 
 @media (min-width: 768px) {
@@ -431,6 +435,11 @@ main .title-holder .title-holder_content-wrapper .title-holder_image {
   main .title-holder .title-holder_content-wrapper .title-holder_image {
     width: 70%;
     height: 60vh;
+  }
+  /*Bootstrap override*/
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: var(--alternate-color);
+    filter: opacity(0.6);
   }
 }
 .post-area_top_img {

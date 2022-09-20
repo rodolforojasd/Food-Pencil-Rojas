@@ -185,6 +185,8 @@
                     gap:var(--spacing-large);
                     justify-self: start;
                     width: 50vw;
+                    transition: filter 4s;
+                    transition-timing-function: ease-in-out;
                     a{
                         &:hover{
                             filter: var(--highlight-filter);
