@@ -53,6 +53,7 @@ body ul {
   list-style-type: none;
 }
 body a {
+  color: var(--alternate-color);
   text-decoration: none;
 }
 body a:link {

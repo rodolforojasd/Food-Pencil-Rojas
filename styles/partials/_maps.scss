@@ -1,0 +1,8 @@
+@use "./partials/global";
+$style-colors:(primaryColor:var(--primary-color),secondaryColor: var(--alternate-color), hoverColor:var(--higlight), footerColor:var( --box-color-grey), boxBgPink:var(--box-color-pink), boxBgGrey: #EAE9E9, fontDarkColor: #0A0908, fontGreycolor: #C8C8C7, fontLightColor: var( --primary-color)) 
+$style-mobileFontSizes:(text-xlarge:var(--text-xlarge), text-large:3rem, text-medium:2.1rem
+)
+$style-mobileSpacings: ()
+
+$style-FontSizes:()
+$style-spacings:()
