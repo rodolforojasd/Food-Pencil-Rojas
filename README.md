@@ -17,4 +17,6 @@ Food & Pencil is a journal for food lovers, we explore the science behind making
 * flavors 
 * food  
 ---
-[Take a look!](https://rodolforojasd.github.io/Food-Pencil-Rojas/)
+
+## Visit us at
+[Food & Pencil](https://rodolforojasd.github.io/Food-Pencil-Rojas/)
