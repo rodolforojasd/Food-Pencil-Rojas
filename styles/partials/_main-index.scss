@@ -6,7 +6,7 @@ main{
         text-align: center;
         img{
         width: 100%;
-        max-height:50vh;
+        max-height:60vh;
         }
     }
 
@@ -46,6 +46,10 @@ main{
             margin-top: var(--spacing-small);
             justify-content: center;
             text-align: center;
+            img{
+                width: 100%;
+                max-height:60vh;
+            }
         
         }
         
@@ -59,8 +63,8 @@ main{
         .title-holder{
             .title-holder_content-wrapper{
                 .title-holder_image{
-                    width:70%;
-                    height:60vh;  
+                    
+                    height:50vh;  
                 }
             }
          }

@@ -373,7 +373,7 @@ main #latest {
 }
 main #latest img {
   width: 100%;
-  max-height: 50vh;
+  max-height: 60vh;
 }
 main .title-holder {
   margin: 0 auto;
@@ -405,6 +405,10 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
     justify-content: center;
     text-align: center;
   }
+  main #latest img {
+    width: 100%;
+    max-height: 60vh;
+  }
   @-webkit-keyframes color-screen {
     0% {
       background-color: var(--box-color-grey);
@@ -434,8 +438,7 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
     }
   }
   main .title-holder .title-holder_content-wrapper .title-holder_image {
-    width: 70%;
-    height: 60vh;
+    height: 50vh;
   }
   /*Bootstrap override*/
   .carousel-control-next-icon, .carousel-control-prev-icon {
@@ -443,6 +446,11 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
     filter: opacity(0.6);
   }
 }
+#resources-subtitle {
+  text-align: center;
+  padding-bottom: var(--spacing-small);
+}
+
 .post-area_top_img {
   width: 100%;
   height: 60vh;
@@ -500,6 +508,15 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
 .post-area-bottom-title {
   margin-top: var(--spacing-small);
   padding-top: var(--spacing-xsmall);
+}
+
+.card {
+  margin-right: var(--spacing-xsmall);
+}
+.card img {
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .single-post_card {
@@ -571,5 +588,21 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
     padding-top: var(--spacing-medium);
     padding-bottom: var(--spacing-small);
     background-color: var(--box-color-grey);
+  }
+  #resources-subtitle {
+    text-align: start;
+    padding-bottom: var(--spacing-small);
+    padding-left: var(--spacing-small);
+    background-color: var(--box-color-grey);
+    padding-top: var(--spacing-small);
+  }
+  .card {
+    margin-right: var(--spacing-xsmall);
+    margin-bottom: 0px;
+  }
+  .card img {
+    height: 30vh;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }/*# sourceMappingURL=style.css.map */

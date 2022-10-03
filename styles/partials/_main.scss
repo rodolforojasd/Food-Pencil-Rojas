@@ -1,4 +1,10 @@
 @use "sass:math";
+
+
+#resources-subtitle{
+  text-align: center;
+  padding-bottom: var(--spacing-small);
+}
  .post-area_top_img {
         width:100%;
         height: 60vh;
@@ -65,6 +71,14 @@ row-gap: var(--spacing-medium);
     padding-top: var(--spacing-xsmall);
 }
 
+.card{
+margin-right: var(--spacing-xsmall) ;
+    img{
+        height: 30vh;
+        object-fit: cover;
+    }
+
+}
 
 .single-post_card{
     text-align: center;
@@ -154,5 +168,23 @@ row-gap: var(--spacing-medium);
      padding-bottom:var(--spacing-small);
      background-color: var(--box-color-grey);
     }
+
+    #resources-subtitle{
+        text-align: start;
+        padding-bottom: var(--spacing-small);
+        padding-left: var(--spacing-small);
+        background-color: var(--box-color-grey);
+        padding-top:var(--spacing-small) ;
+      }
+
+    .card{
+        margin-right: var(--spacing-xsmall) ;
+        margin-bottom: 0px;
+            img{
+                height: 30vh;
+                object-fit: cover;
+            }
+        
+        }
 
 }
