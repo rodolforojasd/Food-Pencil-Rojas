@@ -29,8 +29,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                <a class="navbar-brand" href="../index.html">  
-                    <img   id="logo-small" src="../assets/img/logo/Small-logo-black-painted.svg"   alt="small logo">
+                     <img   id="logo-small" src="../assets/img/logo/Small-logo-black-painted.svg"   alt="small logo">
                 </a> 
+                <span id="sign-up-hidden">sign-up</span>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" class="header-area_navbar-menu"  id="navbar-main-menu"> 
                         <li class="nav-item dropdown" class="nav-item">
@@ -80,21 +81,19 @@
             </div>
 
         </nav>
-        </div>
-        
 
-      
+       
     </header>
     
     
 
-        <main class="row">
-            <section class="col-12 text-center"  class="form-area" id="contac-form">
+        <main class="row" id ="contact-form-wrapper">
+            <section class="col-12 text-center"  class="form-area" >
                     <h2>Want to get in touch?</h2>
                         <p>
                             Please fill your information, and leave any questions or feedback below!
                         </p>
-                    <form class=form-area_format>
+                    <form id=contact-form>
                         <fieldset>
                             <legend>Personal Information</legend>
                             <label for="firstname"> First Name</label>
@@ -395,8 +394,8 @@
                             <input type="checkbox">
                             <br>
                             <br>
-                            <input type="button" value="Summit">
-                            <input type="reset" value="Reset">
+                            <input class="form-button" type="button" value="Summit">
+                            <input class="form-button" type="reset" value="Reset">
                         </fieldset>
                     </form>    
 

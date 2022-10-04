@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*discrete palette :https://mycolor.space/?hex=%230A0908&sub=1
 
 
@@ -127,6 +128,51 @@ a {
     color: var(--highlight);
   }
 }
+/* Map para propiedades globales */
+/*Extend usado para cambiar el estilo de los formularios de la página */
+#contact-form-wrapper #contact-form input, #contact-form-wrapper #contact-form textarea, #contact-form-wrapper #contact-form select, #contact-form-wrapper #contact-form option, #contact-form-wrapper #contact-form .form-button {
+  background-color: #353534;
+}
+
+#contact-form-wrapper {
+  background-color: #0A0908;
+  color: #FFF7EA;
+  padding-bottom: 2rem;
+}
+#contact-form-wrapper #contact-form select option:hover {
+  color: #0A0908;
+}
+#contact-form-wrapper #contact-form .form-button {
+  padding: 1rem;
+  font-size: var(--text-xsmall);
+  border-radius: 10%;
+  color: #FFF7EA;
+}
+
+/* Mix-in implementado para cambiar el estilo de todas las cards de imagenes que no estan featured o son del articulo principal de su respectiva página*/
+@media screen and (min-width: 768px), screen and (orientation: landscape) {
+  .card {
+    margin-right: var(--spacing-xsmall);
+    margin-left: var(--spacing-xsmall);
+    margin-bottom: var(--spacing-xsmall);
+  }
+  .card img {
+    height: 35vh;
+    width: 100%;
+    -o-object-fit: initial;
+       object-fit: initial;
+    -o-object-position: initial;
+       object-position: initial;
+  }
+  .card .card-image-crop {
+    height: 35vh;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 60%;
+       object-position: 50% 60%;
+  }
+}
 .header-area {
   background-color: var(--primary-color);
   position: -webkit-sticky;
@@ -136,6 +182,8 @@ a {
   -moz-column-gap: 0px;
        column-gap: 0px;
   font-size: var(--text-small);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .header-area .header-area_logo {
   display: none;
@@ -270,9 +318,6 @@ a {
   gap: var(--spacing-large);
 }
 
-/* .footer-area_newsletter form{
-     margin-top: var(--spacing-xsmall);
- }*/
 @media screen and (min-width: 768px), screen and (orientation: landscape) {
   .footer-area {
     grid-area: footer;
@@ -359,14 +404,6 @@ a {
   .footer-area .footer-area_news-logo-smd_wrapper .footer-area_menu #scmd-links a:hover {
     filter: var(--highlight-filter);
   }
-  /* .footer-area_scmdlinks a:hover{
-       filter: invert(44%) sepia(27%) saturate(5555%) hue-rotate(27deg) brightness(106%) contrast(104%);
-   }
-
-
-   .footer-area_scmdlinks a:hover{
-       filter:invert(44%) sepia(27%) saturate(5555%) hue-rotate(27deg) brightness(106%) contrast(104%);
-   }   */
 }
 main #latest {
   text-align: center;
@@ -528,11 +565,11 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
 }
 
 /*Contact Page Styles*/
-#contac-form {
+#contac-form-wrapper {
   background-color: var(--alternate-color);
   color: var(--primary-color);
 }
-#contac-form fieldset {
+#contac-form-wrapper fieldset {
   padding-bottom: var(--spacing-medium);
 }
 
@@ -596,13 +633,49 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
     background-color: var(--box-color-grey);
     padding-top: var(--spacing-small);
   }
+}
+/* Map para propiedades globales */
+/*Extend usado para cambiar el estilo de los formularios de la página */
+#contact-form-wrapper #contact-form input, #contact-form-wrapper #contact-form textarea, #contact-form-wrapper #contact-form select, #contact-form-wrapper #contact-form option, #contact-form-wrapper #contact-form .form-button {
+  background-color: #353534;
+}
+
+#contact-form-wrapper {
+  background-color: #0A0908;
+  color: #FFF7EA;
+  padding-bottom: 2rem;
+}
+#contact-form-wrapper #contact-form select option:hover {
+  color: #0A0908;
+}
+#contact-form-wrapper #contact-form .form-button {
+  padding: 1rem;
+  font-size: var(--text-xsmall);
+  border-radius: 10%;
+  color: #FFF7EA;
+}
+
+/* Mix-in implementado para cambiar el estilo de todas las cards de imagenes que no estan featured o son del articulo principal de su respectiva página*/
+@media screen and (min-width: 768px), screen and (orientation: landscape) {
   .card {
     margin-right: var(--spacing-xsmall);
-    margin-bottom: 0px;
+    margin-left: var(--spacing-xsmall);
+    margin-bottom: var(--spacing-xsmall);
   }
   .card img {
-    height: 30vh;
+    height: 35vh;
+    width: 100%;
+    -o-object-fit: initial;
+       object-fit: initial;
+    -o-object-position: initial;
+       object-position: initial;
+  }
+  .card .card-image-crop {
+    height: 35vh;
+    width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    -o-object-position: 50% 60%;
+       object-position: 50% 60%;
   }
 }/*# sourceMappingURL=style.css.map */

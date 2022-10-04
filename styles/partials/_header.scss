@@ -1,4 +1,4 @@
-
+@import"maps-extend-mixin";
 
 .header-area{
     background-color:var(--primary-color);
@@ -6,7 +6,9 @@
     top:0;
     z-index: 4;
     column-gap: 0px;
-    font-size:var(--text-small);    
+    font-size:var(--text-small); 
+    padding-left: map-get($style-spacings,spacingXSmall );   
+    padding-right:map-get($style-spacings,spacingXSmall );
       
     .header-area_logo{
         display:none;

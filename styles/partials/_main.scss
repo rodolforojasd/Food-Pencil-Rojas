@@ -98,7 +98,7 @@ margin-right: var(--spacing-xsmall) ;
 
 /*Contact Page Styles*/
 
-#contac-form{
+#contac-form-wrapper{
     background-color: var(--alternate-color);
     color:var(--primary-color);
     fieldset{
@@ -177,14 +177,6 @@ margin-right: var(--spacing-xsmall) ;
         padding-top:var(--spacing-small) ;
       }
 
-    .card{
-        margin-right: var(--spacing-xsmall) ;
-        margin-bottom: 0px;
-            img{
-                height: 30vh;
-                object-fit: cover;
-            }
-        
-        }
+    
 
 }
