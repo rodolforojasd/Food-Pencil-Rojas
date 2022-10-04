@@ -6,7 +6,7 @@
 
 
 ## Mission
-Food & Pencil is a journal for food lovers, we explore the science behind making delicious food, the optimum techniques and equipments to create a certain dishes, the history and magic of the culinary arts and the breathtaking culture of food across the world.
+Food & Pencil is a journal for food lovers, we explore the science behind making delicious food, the optimum techniques and equipments to create certain dishes, the history and magic of the culinary arts and the breathtaking culture of food across the world.
 
 ## Keywords
 * food science   
