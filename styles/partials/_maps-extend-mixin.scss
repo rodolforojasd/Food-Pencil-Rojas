@@ -57,12 +57,23 @@ $style-spacings:(spacingXLarge:6rem, spacingLarge:2.4rem, spacingMedium:2.2rem, 
     object-position:$image-position ;
 
 }
-@mixin cardImgStyle($img-height,$image-crop,$image-position ){
-    height:$img-height;
-    width:100%;
-    object-fit:$image-crop;
-    object-position:$image-position ;
 
+%card-default-mobile{
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: map-get($style-spacings, spacingMedium);
+}
+
+
+.card{
+    @extend %card-default-mobile;
+    img{
+    @include cardImgStyle(50vh, initial, initial);
+    }
+    .card-image-crop{
+    @include cardImgStyle(50vh, cover, initial);
+    }
+    
 }
 
 
