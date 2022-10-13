@@ -7,8 +7,7 @@
     z-index: 4;
     column-gap: 0px;
     font-size:var(--text-small); 
-    padding-left: map-get($style-spacings,spacingXSmall );   
-    padding-right:map-get($style-spacings,spacingXSmall );
+
       
     .header-area_logo{
         display:none;
@@ -16,11 +15,27 @@
         margin-right: auto;
         align-self: center;
         text-align: center;
-        padding: 0.5rem;
+        padding: 0.7rem;
         #logo-big{
             display:none;
         }
     }
+
+    #nav-menu{
+        align-items: center;
+        margin:0;
+        background-color: var(--primary-color)!important;
+        color: var(--alternate-color);
+
+        padding-left: map-get($style-spacings,spacingXSmall );   
+        padding-right:map-get($style-spacings,spacingXSmall );
+        #navbar-toggler-override{
+            border: 0px;
+        }
+        .btn{
+            color: var(--alternate-color);
+            border: 1px solid var(--alternate-color); 
+        }
 
         #logo-small{
             display:inline-block;
@@ -32,23 +47,14 @@
         #sign-up-hidden{
             visibility:hidden;
         }
+
+    }
+
+
 }
 
 
-     #nav-menu{
-        margin:0;
-        padding-bottom: var(--spacing-small)!important;
-        background-color: var(--primary-color)!important;
-        color: var(--alternate-color)!important;
-        #navbar-toggler-override{
-            border: 0px;
-        }
-        .btn{
-            color: var(--alternate-color);
-            border: 1px solid var(--alternate-color); 
-        }
-
-    }
+    
    
 
     
@@ -64,16 +70,20 @@
         height:fit-content;
 
         .header-area_logo{
+            align-self: center;
+            border-bottom: 0.7px solid var(--alternate-color);
             display:block;
             margin-left: auto;
             margin-right: auto;
-            align-self: center;
             text-align: center;
             padding: 0.5rem;
             #logo-big{
                 display: block;
             }
         }
+
+        #nav-menu{
+
             #logo-small{
                 display:none;
                 max-width: var(--spacing-medium);
@@ -84,6 +94,9 @@
             #sign-up-hidden{
                 display:none;
             }
+
+        }
+           
     }
         
 }

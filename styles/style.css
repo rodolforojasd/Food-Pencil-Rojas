@@ -12,7 +12,7 @@
   --footer-color: #C8C8C7;
   --highlight: #C68300;
   --highlight-filter:invert(44%) sepia(27%) saturate(5555%) hue-rotate(27deg) brightness(106%) contrast(104%);
-  --primary-color: #FFF7EA;
+  --primary-color: #FFF7E8;
   /*Font-family*/
   --font-body: "Poppins", sans-serif;
   /* Font-sizes-mobile */
@@ -136,7 +136,7 @@ a {
 
 #contact-form-wrapper {
   background-color: #0A0908;
-  color: #FFF7EA;
+  color: #FFF7E8;
   padding-bottom: 2rem;
 }
 #contact-form-wrapper #contact-form select option:hover {
@@ -146,7 +146,7 @@ a {
   padding: 1rem;
   font-size: var(--text-xsmall);
   border-radius: 10%;
-  color: #FFF7EA;
+  color: #FFF7E8;
 }
 
 /* Mix-in implementado para cambiar el estilo de todas las cards de imagenes que no estan featured o son del articulo principal de su respectiva página*/
@@ -182,8 +182,6 @@ a {
   -moz-column-gap: 0px;
        column-gap: 0px;
   font-size: var(--text-small);
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .header-area .header-area_logo {
   display: none;
@@ -191,33 +189,34 @@ a {
   margin-right: auto;
   align-self: center;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.7rem;
 }
 .header-area .header-area_logo #logo-big {
   display: none;
 }
-.header-area #logo-small {
+.header-area #nav-menu {
+  align-items: center;
+  margin: 0;
+  background-color: var(--primary-color) !important;
+  color: var(--alternate-color);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.header-area #nav-menu #navbar-toggler-override {
+  border: 0px;
+}
+.header-area #nav-menu .btn {
+  color: var(--alternate-color);
+  border: 1px solid var(--alternate-color);
+}
+.header-area #nav-menu #logo-small {
   display: inline-block;
   max-width: var(--text-xlarge);
   height: var(--text-xlarge);
   align-self: center;
 }
-.header-area #sign-up-hidden {
+.header-area #nav-menu #sign-up-hidden {
   visibility: hidden;
-}
-
-#nav-menu {
-  margin: 0;
-  padding-bottom: var(--spacing-small) !important;
-  background-color: var(--primary-color) !important;
-  color: var(--alternate-color) !important;
-}
-#nav-menu #navbar-toggler-override {
-  border: 0px;
-}
-#nav-menu .btn {
-  color: var(--alternate-color);
-  border: 1px solid var(--alternate-color);
 }
 
 @media screen and (min-width: 768px), screen and (orientation: landscape) {
@@ -234,24 +233,25 @@ a {
     height: fit-content;
   }
   .header-area .header-area_logo {
+    align-self: center;
+    border-bottom: 0.7px solid var(--alternate-color);
     display: block;
     margin-left: auto;
     margin-right: auto;
-    align-self: center;
     text-align: center;
     padding: 0.5rem;
   }
   .header-area .header-area_logo #logo-big {
     display: block;
   }
-  .header-area #logo-small {
+  .header-area #nav-menu #logo-small {
     display: none;
     max-width: var(--spacing-medium);
     height: var(--spacing-medium);
     justify-self: center;
     text-align: center;
   }
-  .header-area #sign-up-hidden {
+  .header-area #nav-menu #sign-up-hidden {
     display: none;
   }
 }
@@ -475,7 +475,7 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
     }
   }
   main .title-holder .title-holder_content-wrapper .title-holder_image {
-    height: 50vh;
+    height: 65vh;
   }
   /*Bootstrap override*/
   .carousel-control-next-icon, .carousel-control-prev-icon {
@@ -642,7 +642,7 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
 
 #contact-form-wrapper {
   background-color: #0A0908;
-  color: #FFF7EA;
+  color: #FFF7E8;
   padding-bottom: 2rem;
 }
 #contact-form-wrapper #contact-form select option:hover {
@@ -652,7 +652,7 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
   padding: 1rem;
   font-size: var(--text-xsmall);
   border-radius: 10%;
-  color: #FFF7EA;
+  color: #FFF7E8;
 }
 
 /* Mix-in implementado para cambiar el estilo de todas las cards de imagenes que no estan featured o son del articulo principal de su respectiva página*/
