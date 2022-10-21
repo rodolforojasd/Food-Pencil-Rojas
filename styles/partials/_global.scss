@@ -13,7 +13,8 @@
     --footer-color: #C8C8C7;
     --highlight: #C68300;
     --highlight-filter:invert(44%) sepia(27%) saturate(5555%) hue-rotate(27deg) brightness(106%) contrast(104%);
-    --primary-color: #FFF7E8;
+    --primary-color:#FFF8EC;
+    --footer-font-color:#949392;
     
     
     /*Font-family*/
@@ -126,7 +127,7 @@
         
     }
 
- 
+    $form-text-color:#C8C8C7;
 
  @media screen and (min-width: 768px), screen and (orientation: landscape) {
 /* Font-sizes-other-devices */
@@ -149,3 +150,5 @@
     }
 
  }
+
+
