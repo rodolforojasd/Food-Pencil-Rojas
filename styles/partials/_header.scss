@@ -33,8 +33,16 @@
             border: 0px;
         }
         .btn{
+            
+        }
+        #nav-search-button{
             color: var(--alternate-color);
-            border: 1px solid var(--alternate-color); 
+            border: 1px solid var(--alternate-color);
+            &:hover{
+                color: var(--primary-color);
+                background-color: var(--alternate-color);
+            } 
+
         }
 
         #logo-small{
@@ -83,6 +91,15 @@
         }
 
         #nav-menu{
+            .nav-item{
+                transition-property: border-bottom;
+                transition-delay: 0.2s;
+                transition-duration: 0.7s;
+                transition-timing-function: ease-in-out;
+                &:hover{
+                    border-bottom: 4px solid var(--alternate-color);
+                }
+            }
 
             #logo-small{
                 display:none;
@@ -91,8 +108,13 @@
                 justify-self: center;
                 text-align: center;
             }
-            #sign-up-hidden{
-                display:none;
+            #sign-up-logo{
+                padding-right: var(--spacing-xsmall);
+                cursor: pointer;
+                transition: transform 1.5 ease-in-out;
+                &:hover{
+                    transform: scale(1.5,1.5);
+                }
             }
 
         }

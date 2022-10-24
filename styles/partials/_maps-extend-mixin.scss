@@ -15,7 +15,7 @@ $style-spacings:(spacingXLarge:6rem, spacingLarge:2.4rem, spacingMedium:2.2rem, 
 %form-style {
     background-color: map-get($style-colors,boxColorWhite);
     color: map-get($style-colors,alternateColor);
-    font-size: map-get($style-fontSizes , textBase);
+    font-size: map-get($style-fontSizes , textSmall);
 }
 
 #contact-form-wrapper{
@@ -23,8 +23,11 @@ $style-spacings:(spacingXLarge:6rem, spacingLarge:2.4rem, spacingMedium:2.2rem, 
     color: map-get($style-colors,alternateColor);
     padding-bottom: map-get($style-spacings,spacingSmall);
     #contact-form {
-        input, textarea, select, option, .form-button{
+        input, label, textarea, select, option, .form-button{
             @extend %form-style;
+        }
+        label{
+            background-color: map-get($style-colors,primaryColor);
         }
         select{
             option{
@@ -37,13 +40,18 @@ $style-spacings:(spacingXLarge:6rem, spacingLarge:2.4rem, spacingMedium:2.2rem, 
         }
         .form-button{
             background-color: map-get($style-colors ,primaryColor );
-            border: 1px solid map-get($style-colors,alternateColor);
+           /* border: 1px solid map-get($style-colors,alternateColor);*/
+           border: none;
             border-radius: 10%;
+            box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 20%);
             color: map-get($style-colors,alternateColor);
             font-size:var(--text-xsmall) ;
             padding: map-get($style-spacings ,spacingXSmall );
+            transition: background-color 0.5s, color 0.5s, font-weight 0.5s, box-shadow 0.5s;
+            transition-timing-function: ease-in;
             &:hover{
                 background-color: map-get($style-colors,alternateColor);
+                box-shadow: none;
                 color: map-get($style-colors ,primaryColor );
                 font-weight:bold;
                 
