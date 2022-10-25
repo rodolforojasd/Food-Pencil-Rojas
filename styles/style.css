@@ -614,12 +614,22 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
   padding-bottom: var(--spacing-small);
 }
 
-.post-area_top_img {
+.post-area_top_img-area .img-container {
+  height: auto;
   width: 100%;
+  margin: 0px;
+}
+.post-area_top_img-area .img-container .post-area_top_img {
+  width: 95vw;
   height: 60vh;
   margin-right: auto;
   margin-left: auto;
   border-radius: 0;
+}
+.post-area_top_img-area .img-container #food-science-feauture-image {
+  width: 100%;
+  height: 60vh;
+  box-sizing: content-box;
 }
 
 /*Bootsrap overide*/
@@ -675,6 +685,7 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
 
 .card {
   margin-right: var(--spacing-xsmall);
+  margin-left: var(--spacing-xsmall);
 }
 .card img {
   height: 30vh;
@@ -714,7 +725,7 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 65vh;
+    height: auto;
   }
   #recipes-science-feature-article-text {
     display: flex;
@@ -725,7 +736,7 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
   }
   .post-area_top_img {
     width: 100%;
-    height: 65vh;
+    height: auto;
   }
   #building-blocks {
     padding-left: var(--spacing-xsmall);

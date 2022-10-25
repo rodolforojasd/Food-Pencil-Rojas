@@ -5,13 +5,27 @@
   text-align: center;
   padding-bottom: var(--spacing-small);
 }
- .post-area_top_img {
-        width:100%;
-        height: 60vh;
-        margin-right: auto;
-        margin-left: auto;
-        border-radius: 0;
+.post-area_top_img-area{
+    .img-container{
+        height: auto;
+        width: 100%;
+        margin: 0px;
+        .post-area_top_img {
+            width:95vw;
+            height: 60vh;
+            margin-right: auto;
+            margin-left: auto;
+            border-radius: 0;
+        }
+        #food-science-feauture-image{
+            width:100%;
+            height: 60vh;
+            box-sizing: content-box;
+        }
     }
+
+}
+
 
 
 
@@ -73,6 +87,7 @@ row-gap: var(--spacing-medium);
 
 .card{
 margin-right: var(--spacing-xsmall) ;
+margin-left: var(--spacing-xsmall);
     img{
         height: 30vh;
         object-fit: cover;
@@ -124,7 +139,7 @@ margin-right: var(--spacing-xsmall) ;
         flex-direction: column;
         justify-content: center;
         align-items: center;  
-        height: 65vh; 
+        height: auto; 
     }
 
     #recipes-science-feature-article-text{
@@ -137,7 +152,7 @@ margin-right: var(--spacing-xsmall) ;
 
     .post-area_top_img {
         width:100%;
-        height:65vh;
+        height:auto;
     }
 
 
