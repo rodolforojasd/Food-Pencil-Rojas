@@ -84,7 +84,7 @@ $style-spacings:(spacingXLarge:6rem, spacingLarge:2.4rem, spacingMedium:2.2rem, 
 }
 
 
-@media screen and (min-width: 768px), screen and (orientation: landscape){
+@media screen and (min-width: 768px){
 
     %card-default{
         margin-right: var(--spacing-xsmall) ;
@@ -96,10 +96,10 @@ $style-spacings:(spacingXLarge:6rem, spacingLarge:2.4rem, spacingMedium:2.2rem, 
     .card{
         @extend %card-default;
         img{
-        @include cardImgStyle(35vh, initial, initial);
+        @include cardImgStyle(auto, initial, initial);
         }
         .card-image-crop{
-        @include cardImgStyle(35vh, cover, 50% 60%);
+        @include cardImgStyle(auto, cover, 50% 60%);
         }
         
     }

@@ -6,13 +6,10 @@
   padding-bottom: var(--spacing-small);
 }
 .post-area_top_img-area{
-    .img-container{
-        height: auto;
-        width: 100%;
-        margin: 0px;
+    
         .post-area_top_img {
-            width:95vw;
-            height: 60vh;
+            width:100vw;
+            height:auto;
             margin-right: auto;
             margin-left: auto;
             border-radius: 0;
@@ -24,7 +21,7 @@
         }
     }
 
-}
+
 
 
 
@@ -72,7 +69,6 @@ row-gap: var(--spacing-medium);
     .post-area-bottom_singlepost{
         margin-bottom: var(--spacing-xsmall);
         img{
-            max-width: 33vw;
             height:auto;  
         }
     }
@@ -89,7 +85,6 @@ row-gap: var(--spacing-medium);
 margin-right: var(--spacing-xsmall) ;
 margin-left: var(--spacing-xsmall);
     img{
-        height: 30vh;
         object-fit: cover;
     }
 
@@ -121,8 +116,19 @@ margin-left: var(--spacing-xsmall);
     }   
 }
 
-
-@media screen and (min-width: 768px), screen and (orientation: landscape) {
+/*@media screen and (min-width: 400px){
+    .post-area-bottom{
+        .post-area-bottom_singlepost{
+            margin-bottom: var(--spacing-xsmall);
+            img{
+                height:65vh;  
+            }
+        }
+    
+    }
+}
+*/
+@media screen and (min-width: 768px){
 /*Bootsrap overide*/
 
     #equipment-feature-article-text{
@@ -131,7 +137,7 @@ margin-left: var(--spacing-xsmall);
         justify-content: center;
         align-items: center;
         padding-left: 10px;
-        height: 65vh;
+        height: auto;
     }
 
     #food-science-feature-article-text{
@@ -147,7 +153,7 @@ margin-left: var(--spacing-xsmall);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 65vh;
+        height: auto;
     }
 
     .post-area_top_img {
