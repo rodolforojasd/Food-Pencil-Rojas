@@ -51,19 +51,22 @@ body main {
   margin: 0px;
   padding: 0px;
 }
-body ul {
+body main a:hover {
+  color: var(--highlight);
+}
+body main ul {
   list-style-type: none;
 }
-body a {
+body main a {
   color: var(--alternate-color);
   text-decoration: none;
 }
-body a:link {
+body main a:link {
   list-style: none;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
-body a:visited {
+body main a:visited {
   list-style: none;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
@@ -86,7 +89,7 @@ body h3 {
   text-align: center;
 }
 body p {
-  font-size: var(--text-small);
+  font-size: var(--text-base);
 }
 
 a {
@@ -532,11 +535,21 @@ a {
   }
 }
 main #latest {
+  background-color: var(--alternate-color);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xlarge);
   text-align: center;
 }
 main #latest img {
   width: 100%;
   max-height: 60vh;
+}
+main #latest h3 {
+  color: var(--primary-color);
+}
+main #index_low-post-area {
+  background-color: var(--box-color-pink);
+  row-gap: var(--spacing-xlarge);
 }
 main .title-holder {
   margin: 0 auto;
@@ -553,52 +566,67 @@ main .title-holder .title-holder_content-wrapper .title-holder_image {
 main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
   filter: opacity(0.7);
 }
+main #trending-now-featured {
+  width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 15px;
+  padding: var(--spacing-small);
+}
+main #essential-reads-featured {
+  border-radius: 15px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: 50% 80%;
+     object-position: 50% 80%;
+  height: 50vh;
+  width: 100%;
+  padding: var(--spacing-small);
+}
 
 @media (min-width: 768px) {
   main a:hover {
     color: var(--highlight);
   }
   main #latest {
-    -webkit-animation-name: color-screen;
-            animation-name: color-screen;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-    background-color: var(--box-color-grey);
     margin-top: var(--spacing-small);
+    margin-bottom: var(--spacing-xlarge);
     justify-content: center;
     text-align: center;
+  }
+  main #latest a:hover {
+    color: var(--highlight);
+  }
+  main #latest h2 {
+    padding: var(--spacing-medium);
+    font-size: var(--text-xlarge);
   }
   main #latest img {
     width: 100%;
     max-height: 60vh;
   }
-  @-webkit-keyframes color-screen {
-    0% {
-      background-color: var(--box-color-grey);
-    }
-    25% {
-      background-color: var(--alternate-color);
-    }
-    50% {
-      background-color: var(--box-color-pink);
-    }
-    100% {
-      background-color: var(--box-color-grey);
-    }
+  main #index_low-post-area {
+    row-gap: var(--spacing-medium);
   }
-  @keyframes color-screen {
-    0% {
-      background-color: var(--box-color-grey);
-    }
-    25% {
-      background-color: var(--alternate-color);
-    }
-    50% {
-      background-color: var(--box-color-pink);
-    }
-    100% {
-      background-color: var(--box-color-grey);
-    }
+  main #trending-now-featured {
+    width: 100%;
+    height: 65vh;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 0;
+  }
+  main #essential-reads-featured {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 80%;
+       object-position: 50% 80%;
+    height: 65vh;
+    width: 100%;
+  }
+  main .title-holder h2 {
+    padding: var(--spacing-medium);
+    font-size: var(--text-xlarge);
   }
   main .title-holder .title-holder_content-wrapper .title-holder_image {
     height: 65vh;
@@ -606,7 +634,21 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
   /*Bootstrap override*/
   .carousel-control-next-icon, .carousel-control-prev-icon {
     background-color: var(--alternate-color);
-    filter: opacity(0.6);
+    filter: opacity(0.7);
+    width: 40px;
+    height: 40px;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  #trending-now-featured {
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 #resources-subtitle {
@@ -615,7 +657,7 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
 }
 
 .post-area_top_img-area .post-area_top_img {
-  width: 100vw;
+  width: 100%;
   height: auto;
   margin-right: auto;
   margin-left: auto;
@@ -625,6 +667,21 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
   width: 100%;
   height: 60vh;
   box-sizing: content-box;
+}
+
+#equipment-feauture-img {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: 55vh;
+}
+
+#featured-recipe-img {
+  width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 0;
 }
 
 /*Bootsrap overide*/
@@ -663,6 +720,9 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
 
 #guides-row {
   row-gap: var(--spacing-medium);
+}
+#guides-row p {
+  text-align: center;
 }
 
 .post-area-bottom .post-area-bottom_singlepost {
@@ -743,6 +803,14 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
     width: 100%;
     height: auto;
   }
+  #equipment-feauture-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 80%;
+       object-position: 50% 80%;
+    height: 65vh;
+    width: 100%;
+  }
   #building-blocks {
     padding-left: var(--spacing-xsmall);
     padding-right: var(--spacing-xsmall);
@@ -766,21 +834,21 @@ main .title-holder .title-holder_content-wrapper .title-holder_image:hover {
     padding-right: var(--spacing-xsmall);
     padding-top: var(--spacing-medium);
     padding-bottom: var(--spacing-small);
-    background-color: var(--box-color-grey);
+    background: linear-gradient(180deg, rgba(255, 248, 236, 0.9519957641) 0%, rgba(235, 229, 227, 0.9435924028) 85%, rgba(236, 224, 220, 0.8287464644) 100%);
   }
   #resources-subtitle {
-    text-align: start;
-    padding-bottom: var(--spacing-small);
+    margin-bottom: 0px;
+    padding-bottom: var(--spacing-medium);
     padding-left: var(--spacing-small);
-    background-color: var(--box-color-grey);
-    padding-top: var(--spacing-small);
+    text-align: start;
+    background-color: var(--primary-color);
+    padding-top: var(--spacing-medium);
+  }
+  #contact-form {
+    padding-left: var(--spacing-medium);
+    padding-right: var(--spacing-medium);
   }
 }
-#contact-form {
-  padding-left: var(--spacing-medium);
-  padding-right: var(--spacing-medium);
-}
-
 /* Map para propiedades globales */
 /*Extend usado para cambiar el estilo de los formularios de la página */
 #contact-form-wrapper #contact-form input, #contact-form-wrapper #contact-form label, #contact-form-wrapper #contact-form textarea, #contact-form-wrapper #contact-form select, #contact-form-wrapper #contact-form option, #contact-form-wrapper #contact-form .form-button {
