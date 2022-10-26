@@ -12,7 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/c862fa0f73.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Food Science | Food & Pencil</title>
 </head>
 <body class="container-fluid"> 
@@ -31,7 +33,7 @@
                <a class="navbar-brand" href="../index.html">  
                      <img   id="logo-small" src="../assets/img/logo/Small-logo-black-painted.svg"   alt="small logo">
                 </a> 
-                <span id="sign-up-hidden">sign-up</span>
+                <i class="fa-solid fa-circle-user fa-lg" id="sign-up-logo"></i>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" class="header-area_navbar-menu"  id="navbar-main-menu"> 
                         <li class="nav-item dropdown" class="nav-item">
@@ -75,13 +77,14 @@
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                      </form>
+                        <button  id ="nav-search-button" class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
 
         </nav>
-      
+
+       
     </header>
       
     
@@ -92,11 +95,18 @@
             <section class="row " class="post-area_top">
               <div class="col-12"> 
                 <h2>Featured </h2> 
-            </div>  
+                </div>  
                 <div class="col-sm-12 col-md-6 col-lg-6" class="post-area_top_img-area">
-                    <figure class="img-container" >
-                        <img class="post-area_top_img" src="https://img.freepik.com/premium-photo/soft-sweet-waffles-table-close-up_252085-35225.jpg?w=2000" alt="browned-waffles" height="400px" widht="280px">                                 
-                    </figure>
+                   
+                    <img class="post-area_top_img" id="food-science-feauture-image" src="https://img.freepik.com/premium-photo/soft-sweet-waffles-table-close-up_252085-35225.jpg?w=2000" 
+                        srcset="https://img.freepik.com/premium-photo/soft-sweet-waffles-table-close-up_252085-35225.jpg?w=2000 2000w,
+                            https://img.freepik.com/premium-photo/soft-sweet-waffles-table-close-up_252085-35225.jpg?w=1000 768w,
+                            https://img.freepik.com/premium-photo/soft-sweet-waffles-table-close-up_252085-35225.jpg?w=500 500w,
+                            https://img.freepik.com/premium-photo/soft-sweet-waffles-table-close-up_252085-35225.jpg?w=250w 250w"
+                            sizes="(min-widht:768px) 50vw, (max-widht:767px) 100vw"
+
+                    loading= "lazy"  alt="browned-waffles">                                 
+
                 </div>
                 <article class="col-sm-12 col-md-6 col-lg-6" class="post-area_top_article" id="food-science-feature-article-text">    
                             
@@ -114,10 +124,16 @@
                     <section class= "col-sm-12 col-md-6 col-lg-4">
                         <article   class= "card text-center" class="post-area-bottom_singlepost">
                                 
-                                <img class="single-post-img" src="../assets/img/post-images/Food Science-fats and oils.jpg" class="card-img-top" alt="Fats & oils">
+                                <img class="single-post-img" src="../assets/img/post-images/Resized/Food Science-fats and oils-1x.jpg" class="card-img-top"
+                                    srcset="../assets/img/post-images/Resized/Food Science-fats and oils-1x.jpg 300w,
+                                            ../assets/img/post-images/Resized/Food Science-fats and oils-2x.jpg 659w,
+                                            ../assets/img/post-images/Resized/Food Science-fats and oils-3x.jpg 941w,
+                                            ../assets/img/post-images/Resized/Food Science-fats and oils-4x.jpg 1341w"
+                                    sizes="(max-widht: 767) 100vw, (max-widht: 992) 45vw;(mix-widht:993) 33vw)"
+                                     loading= "lazy"  alt="Fats & oils">
                                 
                                 <div class="card-body">
-                                    <h3  class="card-title">Fats 101</h3>
+                                    <h3 class="card-title">Fats 101</h3>
                                     <p  class="card-text">It is not all colesterol</p>
                                 </div>
                         </article>
@@ -126,7 +142,13 @@
                     <section class= "col-sm-12 col-md-6 col-lg-4">
                         <article  class= "card text-center" class="post-area-bottom_singlepost">
                            
-                            <img class="single-post-img" src="../assets/img/post-images/food science-baking sizes.jpg" alt="">
+                            <img class="single-post-img" src="../assets/img/post-images/Resized/food science-baking sizes-1x.jpg" class="card-img-top"
+                            srcset="../assets/img/post-images/Resized/food science-baking sizes-1x.jpg 300w,
+                                    ../assets/img/post-images/Resized/food science-baking sizes-2x.jpg 659w,
+                                    ../assets/img/post-images/Resized/food science-baking sizes-3x.jpg 941w,
+                                    ../assets/img/post-images/Resized/food science-baking sizes-4x.jpg 1341w"
+                            sizes="(max-widht: 767) 100vw, (max-widht: 992) 45vw;(mix-widht:993) 33vw)"
+                            loading= "lazy"  alt="Different size of breads">
                                     
                              <div class="card-body">
                             <h3 class="card-title">Size vs Temperature</h3>
@@ -138,7 +160,13 @@
                     <section class= "col-sm-12 col-md-6 col-lg-4">
                         <article  class= "card text-center" class="post-area-bottom_singlepost">
                            
-                            <img class="single-post-img" card="card-image-crop" src="../assets/img/post-images/Food Science-Eggs.jpg" alt="">
+                            <img class="single-post-img" src="../assets/img/post-images/Resized/Food Science-Eggs-1x.jpg" class="card-img-top"
+                            srcset="../assets/img/post-images/Resized/Food Science-Eggs-1x.jpg 300w,
+                                    ../assets/img/post-images/Resized/Food Science-Eggs-2x.jpg 659w,
+                                    ../assets/img/post-images/Resized/Food Science-Eggs-3x.jpg 941w,
+                                    ../assets/img/post-images/Resized/Food Science-Eggs-4x.jpg 1341w"
+                            sizes="(max-widht: 767) 100vw, (max-widht: 992) 45vw;(mix-widht:993) 33vw)"
+                             loading= "lazy"  alt="two forks holding egg">
                              <div class="card-body">
                             <h3 class="card-title">Egg Science</h3>
                              <p class="card-text">Swift army of the ingredients </p>
@@ -150,66 +178,72 @@
 </main>
          
 
-         <footer class="footer-area">
+<footer class="footer-area">
+    <div class="footer-area_top-wrapper">
+        <div class="footer-area_left-top-wrapper">
             <div class="footer-area_news-logo-smd_wrapper">
-                    <div class="footer-area_logo">
-                            <a href="index.html">
-                                <img  id="footer-area_logo-icon" src="../assets/img/logo/food&pencil-vectorlogo.svg" alt="logo" height="14%" width="60%">
-                            </a>
-                    </div> 
-                    <div class="footer-area_newsletter">
-                        <h3> Get amazing recipes, culinary tips, and great deals!</h3>
-        
-                        <form>
-        
-                            <label class="f&p-newsletter" for="f&p-newsletter_input" hidden>Email Adress </label>
-                            <input type="email" name="f&p-newsletter_input" placeholder="Enter mail">
-                            <input type="submit" value="Subscribe">
-                        </form>
-                        <br>
-                    </div>
-            
-                    
-        
-                        <section class="footer-area_menu">
-        
-                                    <nav id="scmd-links" class="footer-area_menu-item">
-                                        <a href="https://www.instagram.com/">
-                                            <img src="../assets/img/icons/instagram-icon.svg" alt="instagram_icon" height="32px" widght="32px">
-                                        </a>
-                                        <a href="https://www.pinterest.com/">
-                                            <img src="../assets/img/icons/pinterest-icon.svg" alt="pinterest_icon" height="32px" widght="32px">
-                                        </a>
-                                        <a href="https://www.tiktok.com/">
-                                            <img src="../assets/img/icons/tik tok icon.svg" alt="tiktok_icon" height="32px" widght="32px">
-                                        </a>
-                                        <a href="https://www.youtube.com/">
-                                            <img src="../assets/img/icons/youtube-icon.svg" alt="youtube_icon" height="32px" widght="32px">
-                                        </a>
-                                        <a href="https://www.reddit.com/">
-                                            <img src="../assets/img/icons/reddit-icon.svg" alt="reddit_icon" height="32px" widght="32px">
-                                        </a> 
-                                    </nav>
-                                
-        <!--Porque me toma el span como primer tipo junto con el nav tuve que poner un span falso. Obviamente esto es mal código pero preguntar despues por que 
-        pasa eso y mejorarlo-->
-                                    <span class="footer-area_menu-item"><a></a></span>
-        <!---->                          
-                                    <span class="footer-area_menu-item"><a href="food_science.html">Food Science</a></span>
-                                    <span class="footer-area_menu-item"><a href="recipes.html">Recipes</a></span>
-                                    <span class="footer-area_menu-item"><a href="equipment.html">Equipment</a></span>
-                                    <span class="footer-area_menu-item"><a href="resources.html">Resources</a></span>
-                                    <span class="footer-area_menu-item"><a href="contact.html">Contact</a></span> 
-        
-                            
-                        </section>
-                   
+                <div class="footer-area_logo">
+                        <a href="index.html">
+                            <img  id="footer-area_logo-icon" src="../assets/img/logo/food&pencil-vectorlogo.svg" loading= "lazy"  alt="logo" height="14%" width="60%">
+                        </a>
+                </div> 
+                <div class="footer-area_newsletter">
+                    <h4> Get amazing recipes, culinary tips, and great deals!</h4>
+    
+                    <form>
+    
+                        <label class="form-label" class="f&p-newsletter" for="f&p-newsletter_input" hidden>Email Adress </label>
+       
+                        <input class="form-control" type="email"  id="newsletter" name="f&p-newsletter_input" placeholder="Enter your email address" >
+
+                    </form>
+
+                    <nav id="scmd-links" class="footer-area_menu-item">
+                        <a href="https://www.instagram.com/">
+                            <img class="scmd-icons" src="../assets/img/icons/instagram-icon.svg"  loading= "lazy"  alt="instagram_icon" height="32px" widght="32px">
+                        </a>
+                        <a href="https://www.pinterest.com/">
+                            <img class="scmd-icons" src="../assets/img/icons/pinterest-icon.svg"  loading= "lazy"  alt="pinterest_icon" height="32px" widght="32px">
+                        </a>
+                        <a href="https://www.tiktok.com/">
+                            <img class="scmd-icons" src="../assets/img/icons/tik tok icon.svg"  loading= "lazy"  alt="tiktok_icon" height="32px" widght="32px">
+                        </a>
+                        <a href="https://www.youtube.com/">
+                            <img class="scmd-icons" src="../assets/img/icons/youtube-icon.svg"  loading= "lazy"  alt="youtube_icon" height="32px" widght="32px">
+                        </a>
+                        <a href="https://www.reddit.com/">
+                            <img  class="scmd-icons" src="../assets/img/icons/reddit-icon.svg" loading= "lazy"  alt="reddit_icon" height="32px" widght="32px">
+                        </a> 
+                    </nav>
+                </div>
             </div>
-            <div >
-        
-                
-            </div>
-        </footer>
+        </div>
+        <section class="footer-area_menu" id="footer-nav" >
+
+                <span class="footer-area_menu-item"><a href="food_science.html">Food Science</a></span>
+                <span class="footer-area_menu-item"><a href="recipes.html">Recipes</a></span>
+                <span class="footer-area_menu-item"><a href="equipment.html">Equipment</a></span>
+                <span class="footer-area_menu-item"><a href="resources.html">Resources</a></span>
+                <span class="footer-area_menu-item" class="footer_secondary-menu-item"><a href="contact.html">Contact Us</a></span> 
+                <span class="footer-area_menu-item" class="footer_secondary-menu-item">About us</span>
+                <span class="footer-area_menu-item" class="footer_secondary-menu-item">Cookies</span>
+                <span class="footer-area_menu-item" class="footer_secondary-menu-item">Terms of use</span>
+                <span class="footer-area_menu-item" class="footer_secondary-menu-item">Advertise</span>
+        </section>
+    </div>
+    <section class="footer-area_legend">
+          <p>Project powered by 
+            <img id="web-pillow-logo" src="../assets/img/icons/web-pillow logo.svg "  loading= "lazy"  alt="logo of Webcloud">
+
+          </p>
+          <small id="=creation-date">
+            SINCE 2022
+          </small>
+          
+
+    </section>
+
+</footer> 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
 </body>

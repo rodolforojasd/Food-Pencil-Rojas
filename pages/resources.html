@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c862fa0f73.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link  href="../styles/style.css" rel="stylesheet">
  
@@ -32,7 +33,7 @@
                <a class="navbar-brand" href="../index.html">  
                      <img   id="logo-small" src="../assets/img/logo/Small-logo-black-painted.svg"   alt="small logo">
                 </a> 
-                <span id="sign-up-hidden">sign-up</span>
+                <i class="fa-solid fa-circle-user fa-lg" id="sign-up-logo"></i>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" class="header-area_navbar-menu"  id="navbar-main-menu"> 
                         <li class="nav-item dropdown" class="nav-item">
@@ -76,14 +77,14 @@
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                      </form>
+                        <button  id ="nav-search-button" class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
 
         </nav>
 
-  
+       
     </header>
         
         <main> 
@@ -94,9 +95,9 @@
                     <section class="col-sm-12 col-md-6 col-lg-3">
                      
                         <div class="card" class="card-changes">
-                          <img src="../assets/img/post-images/Asset 19.png" alt="flavor wheel image">
+                          <img src="../assets/img/post-images/Asset-19.webp" loading= "lazy"  alt="flavor wheel image">
                           <div class="card-body">
-                            <h5 class="card-title">Flavor taste Hack!</h5>
+                            <h3 class="card-title">Flavor taste Hack!</h3>
                             <p class="card-text">Learn to balance your cooking</p>
                           </div>
                         </div>
@@ -105,9 +106,9 @@
                         <section class="col-sm-12 col-md-6 col-lg-3">
                         
                             <div class="card" class="card-changes">
-                              <img src="../assets/img/post-images/guide meal preps.jpg" alt="fruit bowl photo" >
+                              <img src="../assets/img/post-images/guide meal preps.jpg" loading= "lazy"  alt="fruit bowl photo" >
                               <div class="card-body">
-                                <h5 class="card-title">Meal Prep 101</h5>
+                                <h3 class="card-title">Meal Prep 101</h3>
                                 <p class="card-text">Take the most out of each meal</p>
 
                               </div>
@@ -117,9 +118,9 @@
                           <section class="col-sm-12 col-md-6 col-lg-3">
                            
                             <div class="card" class="card-changes">
-                              <img src="../assets/img/post-images/Guide-spices.jpg" alt="photo of different spices" >
+                              <img src="../assets/img/post-images/Guide-spices.webp" loading= "lazy"  alt="photo of different spices" >
                               <div class="card-body">
-                                <h5 class="card-title">Spices 101</h5>
+                                <h3 class="card-title">Spices 101</h3>
                                 <p class="card-text">Take your flavor to the next level</p>
 
                               </div>
@@ -129,9 +130,9 @@
                           <section class="col-sm-12 col-md-6 col-lg-3">
                       
                             <div class="card" class="card-changes">
-                              <img class= "image-top"class="card-image-crop" src="../assets/img/post-images/baking guide.jpg"  alt="flour-being-sieve" />
+                              <img class= "image-top"class="card-image-crop" src="https://img.freepik.com/foto-gratis/tamiz-blanco-harina-pan_144627-8683.jpg?w=2000&t=st=1666627814~exp=1666628414~hmac=9f3145445c66eaf0d87801683e4593c477c08edf2624a68698edff3a9bd0bc77"  loading= "lazy"  alt="flour-being-sieve" />
                               <div class="card-body">
-                                <h5 class="card-title">Flour 101</h5>
+                                <h3 class="card-title">Flour 101</h3>
                                 <p class="card-text">flour sieve and other myths..</p>
                               </div>
                             </div>
@@ -143,65 +144,71 @@
 
 
         <footer class="footer-area">
-            <div class="footer-area_news-logo-smd_wrapper">
-                    <div class="footer-area_logo">
-                            <a href="index.html">
-                                <img  id="footer-area_logo-icon" src="../assets/img/logo/food&pencil-vectorlogo.svg" alt="logo" height="14%" width="60%">
-                            </a>
-                    </div> 
-                    <div class="footer-area_newsletter">
-                        <h3> Get amazing recipes, culinary tips, and great deals!</h3>
-        
-                        <form>
-        
-                            <label class="f&p-newsletter" for="f&p-newsletter_input" hidden>Email Adress </label>
-                            <input type="email" name="f&p-newsletter_input" placeholder="Enter mail">
-                            <input type="submit" value="Subscribe">
-                        </form>
-                        <br>
-                    </div>
+            <div class="footer-area_top-wrapper">
+                <div class="footer-area_left-top-wrapper">
+                    <div class="footer-area_news-logo-smd_wrapper">
+                        <div class="footer-area_logo">
+                                <a href="index.html">
+                                    <img  id="footer-area_logo-icon" src="../assets/img/logo/food&pencil-vectorlogo.svg" loading= "lazy"  alt="logo" height="14%" width="60%">
+                                </a>
+                        </div> 
+                        <div class="footer-area_newsletter">
+                            <h4> Get amazing recipes, culinary tips, and great deals!</h4>
             
-                    
-        
-                        <section class="footer-area_menu">
-        
-                                    <nav id="scmd-links" class="footer-area_menu-item">
-                                        <a href="https://www.instagram.com/">
-                                            <img src="../assets/img/icons/instagram-icon.svg" alt="instagram_icon" height="32px" widght="32px">
-                                        </a>
-                                        <a href="https://www.pinterest.com/">
-                                            <img src="../assets/img/icons/pinterest-icon.svg" alt="pinterest_icon" height="32px" widght="32px">
-                                        </a>
-                                        <a href="https://www.tiktok.com/">
-                                            <img src="../assets/img/icons/tik tok icon.svg" alt="tiktok_icon" height="32px" widght="32px">
-                                        </a>
-                                        <a href="https://www.youtube.com/">
-                                            <img src="../assets/img/icons/youtube-icon.svg" alt="youtube_icon" height="32px" widght="32px">
-                                        </a>
-                                        <a href="https://www.reddit.com/">
-                                            <img src="../assets/img/icons/reddit-icon.svg" alt="reddit_icon" height="32px" widght="32px">
-                                        </a> 
-                                    </nav>
-                                
-        <!--Porque me toma el span como primer tipo junto con el nav tuve que poner un span falso. Obviamente esto es mal código pero preguntar despues por que 
-        pasa eso y mejorarlo-->
-                                    <span class="footer-area_menu-item"><a></a></span>
-        <!---->                          
-                                    <span class="footer-area_menu-item"><a href="food_science.html">Food Science</a></span>
-                                    <span class="footer-area_menu-item"><a href="recipes.html">Recipes</a></span>
-                                    <span class="footer-area_menu-item"><a href="equipment.html">Equipment</a></span>
-                                    <span class="footer-area_menu-item"><a href="resources.html">Resources</a></span>
-                                    <span class="footer-area_menu-item"><a href="contact.html">Contact</a></span> 
-        
-                            
-                        </section>
-                   
+                            <form>
+            
+                                <label class="form-label" class="f&p-newsletter" for="f&p-newsletter_input" hidden>Email Adress </label>
+               
+                                <input class="form-control" type="email"  id="newsletter" name="f&p-newsletter_input" placeholder="Enter your email address" >
+
+                            </form>
+
+                            <nav id="scmd-links" class="footer-area_menu-item">
+                                <a href="https://www.instagram.com/">
+                                    <img class="scmd-icons" src="../assets/img/icons/instagram-icon.svg"  loading= "lazy"  alt="instagram_icon" height="32px" widght="32px">
+                                </a>
+                                <a href="https://www.pinterest.com/">
+                                    <img class="scmd-icons" src="../assets/img/icons/pinterest-icon.svg"  loading= "lazy"  alt="pinterest_icon" height="32px" widght="32px">
+                                </a>
+                                <a href="https://www.tiktok.com/">
+                                    <img class="scmd-icons" src="../assets/img/icons/tik tok icon.svg"  loading= "lazy"  alt="tiktok_icon" height="32px" widght="32px">
+                                </a>
+                                <a href="https://www.youtube.com/">
+                                    <img class="scmd-icons" src="../assets/img/icons/youtube-icon.svg"  loading= "lazy"  alt="youtube_icon" height="32px" widght="32px">
+                                </a>
+                                <a href="https://www.reddit.com/">
+                                    <img  class="scmd-icons" src="../assets/img/icons/reddit-icon.svg" loading= "lazy"  alt="reddit_icon" height="32px" widght="32px">
+                                </a> 
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <section class="footer-area_menu" id="footer-nav" >
+
+                        <span class="footer-area_menu-item"><a href="food_science.html">Food Science</a></span>
+                        <span class="footer-area_menu-item"><a href="recipes.html">Recipes</a></span>
+                        <span class="footer-area_menu-item"><a href="equipment.html">Equipment</a></span>
+                        <span class="footer-area_menu-item"><a href="resources.html">Resources</a></span>
+                        <span class="footer-area_menu-item" class="footer_secondary-menu-item"><a href="contact.html">Contact Us</a></span> 
+                        <span class="footer-area_menu-item" class="footer_secondary-menu-item">About us</span>
+                        <span class="footer-area_menu-item" class="footer_secondary-menu-item">Cookies</span>
+                        <span class="footer-area_menu-item" class="footer_secondary-menu-item">Terms of use</span>
+                        <span class="footer-area_menu-item" class="footer_secondary-menu-item">Advertise</span>
+                </section>
             </div>
-            <div >
-        
-                
-            </div>
-        </footer>   
+            <section class="footer-area_legend">
+                  <p>Project powered by 
+                    <img id="web-pillow-logo" src="../assets/img/icons/web-pillow logo.svg "  loading= "lazy"  alt="logo of Webcloud">
+  
+                  </p>
+                  <small id="=creation-date">
+                    SINCE 2022
+                  </small>
+                  
+
+            </section>
+
+        </footer> 
         
     
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>

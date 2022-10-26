@@ -3,16 +3,44 @@
 
 #resources-subtitle{
   text-align: center;
-  padding-bottom: var(--spacing-small);
+  padding-bottom: var(--spacing-small)
+  
 }
- .post-area_top_img {
-        width:100%;
-        height: 60vh;
-        margin-right: auto;
-        margin-left: auto;
-        border-radius: 0;
-    }
 
+.post-area_top_img-area{
+    
+    .post-area_top_img {
+            width:100%;
+            height:auto;
+            margin-right: auto;
+            margin-left: auto;
+            border-radius: 0;
+     }
+
+
+
+        #food-science-feauture-image{
+            width:100%;
+            height: 60vh;
+            box-sizing: content-box;
+        }
+
+        
+}
+
+#equipment-feauture-img{
+    width: 100%;
+    object-fit: fill;
+    height: 55vh;
+}
+
+#featured-recipe-img{
+    width:100%;
+    height:auto;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 0;
+}
 
 
 /*Bootsrap overide*/
@@ -42,14 +70,20 @@ padding:0;
 #building-blocks{
 row-gap: var(--spacing-medium);
 }
+
 #equipment-manuals{
 row-gap: var(--spacing-medium);
 }
+
 #more-recipes-row{
 row-gap: var(--spacing-medium);
 }
+
 #guides-row{
 row-gap: var(--spacing-medium);
+    p{
+        text-align: center;
+    }
 }
 
 
@@ -58,7 +92,6 @@ row-gap: var(--spacing-medium);
     .post-area-bottom_singlepost{
         margin-bottom: var(--spacing-xsmall);
         img{
-            max-width: 33vw;
             height:auto;  
         }
     }
@@ -73,8 +106,8 @@ row-gap: var(--spacing-medium);
 
 .card{
 margin-right: var(--spacing-xsmall) ;
+margin-left: var(--spacing-xsmall);
     img{
-        height: 30vh;
         object-fit: cover;
     }
 
@@ -106,8 +139,19 @@ margin-right: var(--spacing-xsmall) ;
     }   
 }
 
-
-@media screen and (min-width: 768px), screen and (orientation: landscape) {
+/*@media screen and (min-width: 400px){
+    .post-area-bottom{
+        .post-area-bottom_singlepost{
+            margin-bottom: var(--spacing-xsmall);
+            img{
+                height:65vh;  
+            }
+        }
+    
+    }
+}
+*/
+@media screen and (min-width: 768px){
 /*Bootsrap overide*/
 
     #equipment-feature-article-text{
@@ -116,7 +160,7 @@ margin-right: var(--spacing-xsmall) ;
         justify-content: center;
         align-items: center;
         padding-left: 10px;
-        height: 65vh;
+        height: auto;
     }
 
     #food-science-feature-article-text{
@@ -124,7 +168,7 @@ margin-right: var(--spacing-xsmall) ;
         flex-direction: column;
         justify-content: center;
         align-items: center;  
-        height: 65vh; 
+        height: auto; 
     }
 
     #recipes-science-feature-article-text{
@@ -132,15 +176,22 @@ margin-right: var(--spacing-xsmall) ;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 65vh;
+        height: auto;
     }
 
     .post-area_top_img {
         width:100%;
-        height:65vh;
+        height:auto;
     }
 
 
+
+    #equipment-feauture-img{
+        object-fit: cover;
+        object-position:50% 80%;
+        height: 65vh;
+        width: 100%;
+    }
     
 
     #building-blocks{
@@ -166,17 +217,28 @@ margin-right: var(--spacing-xsmall) ;
      padding-right: var(--spacing-xsmall);
      padding-top: var(--spacing-medium);
      padding-bottom:var(--spacing-small);
-     background-color: var(--box-color-grey);
+     background: linear-gradient(180deg, rgba(255,248,236,0.9519957641259629) 0%, rgba(235,229,227,0.9435924027814251) 85%, rgba(236,224,220,0.8287464644060749) 100%);
     }
 
     #resources-subtitle{
-        text-align: start;
-        padding-bottom: var(--spacing-small);
+        
+        margin-bottom: 0px;
+        padding-bottom: var(--spacing-medium);
         padding-left: var(--spacing-small);
-        background-color: var(--box-color-grey);
-        padding-top:var(--spacing-small) ;
+        text-align: start;
+        background-color: var(--primary-color);
+        padding-top:var(--spacing-medium) ;
       }
 
     
+
+
+
+
+    #contact-form{
+        padding-left: var(--spacing-medium);
+        padding-right: var(--spacing-medium);
+
+    }
 
 }

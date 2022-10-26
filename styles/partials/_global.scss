@@ -13,7 +13,8 @@
     --footer-color: #C8C8C7;
     --highlight: #C68300;
     --highlight-filter:invert(44%) sepia(27%) saturate(5555%) hue-rotate(27deg) brightness(106%) contrast(104%);
-    --primary-color: #FFF7EA;
+    --primary-color:#FFF8EC;
+    --footer-font-color:#949392;
     
     
     /*Font-family*/
@@ -55,7 +56,12 @@
         main{
             margin: 0px;
             padding: 0px;
+            a{
+                &:hover{
+                    color: var(--highlight);
+                }
             }
+            
         ul{
             list-style-type: none;
         }
@@ -73,7 +79,7 @@
                 text-decoration-line:none;
             }
         }
-    
+        }
         h1{
             font-size: var(--text-xlarge);
             margin-top: 0px;
@@ -97,7 +103,7 @@
     
     
         p{
-        font-size: var(--text-small);
+        font-size: var(--text-base);
         }
     }
 
@@ -126,7 +132,7 @@
         
     }
 
- 
+    $form-text-color:#C8C8C7;
 
  @media screen and (min-width: 768px), screen and (orientation: landscape) {
 /* Font-sizes-other-devices */
@@ -142,10 +148,12 @@
     a{
         text-decoration: none;
         color: var(--alternate-color);
-        transition: color 1.2s;
+        transition: color 1s;
         &:hover{
             color:var(--highlight);
         }
     }
 
  }
+
+

@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/c862fa0f73.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Recipes | Food & Pencil</title>
 </head>
 <body class="container-fluid"> 
@@ -31,7 +32,7 @@
                <a class="navbar-brand" href="../index.html">  
                      <img   id="logo-small" src="../assets/img/logo/Small-logo-black-painted.svg"   alt="small logo">
                 </a> 
-                <span id="sign-up-hidden">sign-up</span>
+                <i class="fa-solid fa-circle-user fa-lg" id="sign-up-logo"></i>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" class="header-area_navbar-menu"  id="navbar-main-menu"> 
                         <li class="nav-item dropdown" class="nav-item">
@@ -75,8 +76,8 @@
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                      </form>
+                        <button  id ="nav-search-button" class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
 
@@ -91,23 +92,41 @@
             <h1 id="recipes-title">Recipes</h1>
 
             <section class="row" class="post-area_top">
+                <h2>Featured </h2> 
                 <article class="row" class="post-area_top_article">
                     <div class="col-sm-12 col-md-6 col-lg-6" class="bs-override" id="recipes-science-feature-article-text">
-                        <h2>Create your own salt flavors!</h2>
+                        <h3>Create your own salt flavors!</h3>
                         <h4> Grab some jalapennos and make a flavor infused spice bomb!</h4> 
                     </div>
-                    <figure class="col-sm-12 col-md-6 col-lg-6"  class="img-container">
-                        <img  class="post-area_top_img" src="../assets/img/post-images/what-to-do-with-a-lot-of-jalapenos.jpg.webp"   alt="jalapeno-salt" >
-                    </figure>  
+                    <div class="col-sm-12 col-md-6 col-lg-6" class="post-area_top_img-area">
+                        <img  class="post-area_top_img" id="featured-recipe-img" src="https://images.pexels.com/photos/5792430/pexels-photo-5792430.jpeg?auto=compress&cs=tinysrgb&w=882" 
+                        srcset="https://images.pexels.com/photos/5792430/pexels-photo-5792430.jpeg?auto=compress&cs=tinysrgb&w=3840  3000w,
+                        https://images.pexels.com/photos/5792430/pexels-photo-5792430.jpeg?auto=compress&cs=tinysrgb&w=2700 2500w,
+                        https://images.pexels.com/photos/5792430/pexels-photo-5792430.jpeg?auto=compress&cs=tinysrgb&w=1260 1000w,
+                        https://images.pexels.com/photos/5792430/pexels-photo-5792430.jpeg?auto=compress&cs=tinysrgb&w=882 800w
+                        https://images.pexels.com/photos/5792430/pexels-photo-5792430.jpeg?auto=compress&cs=tinysrgb&w=450 450w,
+                        https://images.pexels.com/photos/5792430/pexels-photo-5792430.jpeg?auto=compress&cs=tinysrgb&w=250 250w
+                        "
+                        sizes="(min-widht:768px) 50vw, (max-widht:767px) 100vw"  
+                        loading= "lazy"  alt="jalapeno-salt" >
+                    </div>
+                        
+                    
                 </article> 
             </section>  
             
             <section  class=row class="post-area-bottom" id="more-recipes-row" >
+                <h2>More Recipes</h2>
 
             <section class= "col-sm-12 col-md-6 col-lg-4">
                     <article   class= "card text-center" class="post-area-bottom_singlepost">
 
-                                    <img class="" class="" src="../assets/img/post-images/recipe-edamame.jpg" alt="">
+                                    <img class="" class="" src="https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                    srcset="https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=2700&h=1284&dpr=2 300w,
+                                https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 659w,
+                                https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=882&h=523&dpr=2 941w"
+                                sizes="(max-widht: 767) 100vw, (max-widht: 992) 45vw;(mix-widht:993) 33vw)"
+                                    loading= "lazy"  alt="Edameme">
 
                             <h3>Japanese Appetizzers</h3>
                             <p>Edamames, sashimi and more.</p>
@@ -116,16 +135,28 @@
                 <section class= "col-sm-12 col-md-6 col-lg-4">    
                     <article   class= "card text-center" class="post-area-bottom_singlepost">
 
-                                <img class="" src="../assets/img/post-images/recipe-gazpacho.jpg" alt="">
+                        <img class="single-post-img" src="../assets/img/post-images/Resized/recipe-gazpacho-1x.jpg" class="card-img-top"
+                        srcset="../assets/img/post-images/Resized/recipe-gazpacho-1x.jpg 300w,
+                                ../assets/img/post-images/Resized/recipe-gazpacho-2x.jpg 659w,
+                                ../assets/img/post-images/Resized/recipe-gazpacho-3x.jpg 941w,
+                                ../assets/img/post-images/Resized/recipe-gazpacho-4x.jpg 1341w"
+                        sizes="(max-widht: 767) 100vw, (max-widht: 992) 45vw;(mix-widht:993) 33vw)"
+                                loading= "lazy"  alt="">
 
-                        <h3>Spannish: Gazpacho</h3>
+                        <h3>Spanish: Gazpacho</h3>
                         <p>The best soup you can make in seconds</p>
                     </article>
                 </section>
 
                 <section class= "col-sm-12 col-md-6 col-lg-4">
                     <article   class= "card text-center" class="post-area-bottom_singlepost">
-                            <img class="card-image-crop" src="../assets/img/post-images/recipe-mojito.jpg" alt="">
+                            <img class="single-post-img" src="../assets/img/post-images/Resized/recipe-mojito-1x.jpg" class="card-img-top"
+                            srcset="../assets/img/post-images/Resized/recipe-mojito-1x.jpg 300w,
+                                    ../assets/img/post-images/Resized/recipe-mojito-2x.jpg 659w,
+                                    ../assets/img/post-images/Resized/recipe-mojito-3x.jpg 941w,
+                                    ../assets/img/post-images/Resized/recipe-mojito-4x.jpg 1341w"
+                            sizes="(max-widht: 767) 100vw, (max-widht: 992) 45vw;(mix-widht:993) 33vw)"
+                            loading= "lazy"  alt="photo of mojito coktail">
                             <h3>Classics: Mojito</h3>
                             <p>The basics, and some great twists..</p>
                     </article>
@@ -134,66 +165,72 @@
         </section>
     </main>
 
-        <footer class="footer-area">
-            <div class="footer-area_news-logo-smd_wrapper">
+    <footer class="footer-area">
+        <div class="footer-area_top-wrapper">
+            <div class="footer-area_left-top-wrapper">
+                <div class="footer-area_news-logo-smd_wrapper">
                     <div class="footer-area_logo">
                             <a href="index.html">
-                                <img  id="footer-area_logo-icon" src="../assets/img/logo/food&pencil-vectorlogo.svg" alt="logo" height="14%" width="60%">
+                                <img  id="footer-area_logo-icon" src="../assets/img/logo/food&pencil-vectorlogo.svg" loading= "lazy"  alt="logo" height="14%" width="60%">
                             </a>
                     </div> 
                     <div class="footer-area_newsletter">
-                        <h3> Get amazing recipes, culinary tips, and great deals!</h3>
+                        <h4> Get amazing recipes, culinary tips, and great deals!</h4>
         
                         <form>
         
-                            <label class="f&p-newsletter" for="f&p-newsletter_input" hidden>Email Adress </label>
-                            <input type="email" name="f&p-newsletter_input" placeholder="Enter mail">
-                            <input type="submit" value="Subscribe">
+                            <label class="form-label" class="f&p-newsletter" for="f&p-newsletter_input" hidden>Email Adress </label>
+           
+                            <input class="form-control" type="email"  id="newsletter" name="f&p-newsletter_input" placeholder="Enter your email address" >
+
                         </form>
-                        <br>
+
+                        <nav id="scmd-links" class="footer-area_menu-item">
+                            <a href="https://www.instagram.com/">
+                                <img class="scmd-icons" src="../assets/img/icons/instagram-icon.svg"  loading= "lazy"  alt="instagram_icon" height="32px" widght="32px">
+                            </a>
+                            <a href="https://www.pinterest.com/">
+                                <img class="scmd-icons" src="../assets/img/icons/pinterest-icon.svg"  loading= "lazy"  alt="pinterest_icon" height="32px" widght="32px">
+                            </a>
+                            <a href="https://www.tiktok.com/">
+                                <img class="scmd-icons" src="../assets/img/icons/tik tok icon.svg"  loading= "lazy"  alt="tiktok_icon" height="32px" widght="32px">
+                            </a>
+                            <a href="https://www.youtube.com/">
+                                <img class="scmd-icons" src="../assets/img/icons/youtube-icon.svg"  loading= "lazy"  alt="youtube_icon" height="32px" widght="32px">
+                            </a>
+                            <a href="https://www.reddit.com/">
+                                <img  class="scmd-icons" src="../assets/img/icons/reddit-icon.svg" loading= "lazy"  alt="reddit_icon" height="32px" widght="32px">
+                            </a> 
+                        </nav>
                     </div>
-            
-                    
-        
-                        <section class="footer-area_menu">
-        
-                                    <nav id="scmd-links" class="footer-area_menu-item">
-                                        <a href="https://www.instagram.com/">
-                                            <img src="../assets/img/icons/instagram-icon.svg" alt="instagram_icon" height="32px" widght="32px">
-                                        </a>
-                                        <a href="https://www.pinterest.com/">
-                                            <img src="../assets/img/icons/pinterest-icon.svg" alt="pinterest_icon" height="32px" widght="32px">
-                                        </a>
-                                        <a href="https://www.tiktok.com/">
-                                            <img src="../assets/img/icons/tik tok icon.svg" alt="tiktok_icon" height="32px" widght="32px">
-                                        </a>
-                                        <a href="https://www.youtube.com/">
-                                            <img src="../assets/img/icons/youtube-icon.svg" alt="youtube_icon" height="32px" widght="32px">
-                                        </a>
-                                        <a href="https://www.reddit.com/">
-                                            <img src="../assets/img/icons/reddit-icon.svg" alt="reddit_icon" height="32px" widght="32px">
-                                        </a> 
-                                    </nav>
-                                
-        <!--Porque me toma el span como primer tipo junto con el nav tuve que poner un span falso. Obviamente esto es mal código pero preguntar despues por que 
-        pasa eso y mejorarlo-->
-                                    <span class="footer-area_menu-item"><a></a></span>
-        <!---->                          
-                                    <span class="footer-area_menu-item"><a href="food_science.html">Food Science</a></span>
-                                    <span class="footer-area_menu-item"><a href="recipes.html">Recipes</a></span>
-                                    <span class="footer-area_menu-item"><a href="equipment.html">Equipment</a></span>
-                                    <span class="footer-area_menu-item"><a href="resources.html">Resources</a></span>
-                                    <span class="footer-area_menu-item"><a href="contact.html">Contact</a></span> 
-        
-                            
-                        </section>
-                   
+                </div>
             </div>
-            <div >
-        
-                
-            </div>
-        </footer>   
+            <section class="footer-area_menu" id="footer-nav" >
+
+                    <span class="footer-area_menu-item"><a href="food_science.html">Food Science</a></span>
+                    <span class="footer-area_menu-item"><a href="recipes.html">Recipes</a></span>
+                    <span class="footer-area_menu-item"><a href="equipment.html">Equipment</a></span>
+                    <span class="footer-area_menu-item"><a href="resources.html">Resources</a></span>
+                    <span class="footer-area_menu-item" class="footer_secondary-menu-item"><a href="contact.html">Contact Us</a></span> 
+                    <span class="footer-area_menu-item" class="footer_secondary-menu-item">About us</span>
+                    <span class="footer-area_menu-item" class="footer_secondary-menu-item">Cookies</span>
+                    <span class="footer-area_menu-item" class="footer_secondary-menu-item">Terms of use</span>
+                    <span class="footer-area_menu-item" class="footer_secondary-menu-item">Advertise</span>
+            </section>
+        </div>
+        <section class="footer-area_legend">
+              <p>Project powered by 
+                <img id="web-pillow-logo" src="../assets/img/icons/web-pillow logo.svg "  loading= "lazy"  alt="logo of Webcloud">
+
+              </p>
+              <small id="=creation-date">
+                SINCE 2022
+              </small>
+              
+
+        </section>
+
+    </footer> 
         
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </body> 

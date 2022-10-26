@@ -3,7 +3,7 @@
 
 /* Map para propiedades globales */
 
-$style-colors:(primaryColor:#FFF7EA, alternateColor:#0A0908, hoverColor:#C68300, footerColor:#EAE9E9, boxBgPin: #ECE0DC, boxBgGrey: #EAE9E9, fontDarkColor: #0A0908, fontGreyColor: #C8C8C7, formBgColor:#353534) ;
+$style-colors:(primaryColor:#FFF7E8, alternateColor:#0A0908, hoverColor:#C68300, footerColor:#EAE9E9, boxBgPin: #ECE0DC, boxBgGrey: #EAE9E9, fontDarkColor: #0A0908, fontGreyColor: #C8C8C7, formBgColor:#FFF8EC, boxColorWhite:white) ;
 $style-mobileFontSizes:(textXLarge:3.2rem, textLarge:3rem, textMedium:2.1rem, textBase:1.8rem, textSmall:1.4rem);
 $style-fontSizes:(textXLarge:4rem, textLarge:3.8rem, textMedium:3.2rem, textBase:1.9rem, textSmall:1.4rem);
 $style-spacings:(spacingXLarge:6rem, spacingLarge:2.4rem, spacingMedium:2.2rem, spacingSmall:2rem, spacingXSmall:1rem);
@@ -13,17 +13,21 @@ $style-spacings:(spacingXLarge:6rem, spacingLarge:2.4rem, spacingMedium:2.2rem, 
 /*Extend usado para cambiar el estilo de los formularios de la página */
 
 %form-style {
-    background-color: map-get($style-colors,formBgColor);
-    color: map-get($style-colors,fontGreycolor);
+    background-color: map-get($style-colors,boxColorWhite);
+    color: map-get($style-colors,alternateColor);
+    font-size: map-get($style-fontSizes , textSmall);
 }
 
 #contact-form-wrapper{
-    background-color: map-get($style-colors,alternateColor);
-    color: map-get($style-colors,primaryColor);
+    background-color: map-get($style-colors,formBgColor);
+    color: map-get($style-colors,alternateColor);
     padding-bottom: map-get($style-spacings,spacingSmall);
     #contact-form {
-        input, textarea, select, option, .form-button{
+        input, label, textarea, select, option, .form-button{
             @extend %form-style;
+        }
+        label{
+            background-color: map-get($style-colors,primaryColor);
         }
         select{
             option{
@@ -35,10 +39,24 @@ $style-spacings:(spacingXLarge:6rem, spacingLarge:2.4rem, spacingMedium:2.2rem, 
             }
         }
         .form-button{
-            padding: map-get($style-spacings ,spacingXSmall );
-            font-size:var(--text-xsmall) ;
+            background-color: map-get($style-colors ,primaryColor );
+           /* border: 1px solid map-get($style-colors,alternateColor);*/
+           border: none;
             border-radius: 10%;
-            color: map-get($style-colors,primaryColor);
+            box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 20%);
+            color: map-get($style-colors,alternateColor);
+            font-size:var(--text-xsmall) ;
+            padding: map-get($style-spacings ,spacingXSmall );
+            transition: background-color 0.5s, color 0.5s, font-weight 0.5s, box-shadow 0.5s;
+            transition-timing-function: ease-in;
+            &:hover{
+                background-color: map-get($style-colors,alternateColor);
+                box-shadow: none;
+                color: map-get($style-colors ,primaryColor );
+                font-weight:bold;
+                
+            }
+            
         }
     } 
 
@@ -77,7 +95,7 @@ $style-spacings:(spacingXLarge:6rem, spacingLarge:2.4rem, spacingMedium:2.2rem, 
 }
 
 
-@media screen and (min-width: 768px), screen and (orientation: landscape){
+@media screen and (min-width: 768px){
 
     %card-default{
         margin-right: var(--spacing-xsmall) ;
@@ -89,10 +107,10 @@ $style-spacings:(spacingXLarge:6rem, spacingLarge:2.4rem, spacingMedium:2.2rem, 
     .card{
         @extend %card-default;
         img{
-        @include cardImgStyle(35vh, initial, initial);
+        @include cardImgStyle(auto, initial, initial);
         }
         .card-image-crop{
-        @include cardImgStyle(35vh, cover, 50% 60%);
+        @include cardImgStyle(auto, cover, 50% 60%);
         }
         
     }
