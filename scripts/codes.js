@@ -12,5 +12,51 @@ function scrollFunction(){
 	}
 } 
 
+let userName = "";
+let userMail= "";
+let userPassword="";
+  
+const function registerUser () {
+ = prompt("Do you want to register?: Yes/No")
+
+if accept.lowerCase === "yes" {
+userName =prompt("Please select an user name");
+  
+userMail = prompt("Please enter an email adress");
+  
+userPassword = prompt("Please enter a password at least0 8 characters long");
+
+userBirthdate = prompt("Please enter your birthdate: Exp 11/07/1976");
+
+console.log(`Welcome to the food nerds club ${userName}!`)
+VER
+  alert("Maybe next time.");
+ }
+}
+
+registerUser();
+  
+
+
+
+const function checkUserAccess(){
+  
+}
+
+
+
+//comment
+const function postComment()0{
+  
+}
+
+
+//rate recipe
+const articleRating () -->{
+  
+}
+
+
+//shooping cart
 
 
