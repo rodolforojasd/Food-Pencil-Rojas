@@ -6,29 +6,39 @@ let  userToken=0
 let userAccess = false
   
 const  registerUser = () => {
-while (registResponse !== "yes" ||"no"){
-let  registResponse= prompt("Do you want to register?: Yes/No")	
-alert (`I'm sorry, can you repeat your answer`)
+	debugger
+	let registResponse = ""
+	
+	
+	while (registResponse !== "yes" && registResponse !== "no"){
+		registResponse = prompt("Do you want to register?: Yes/No")	
+		registResponse = registResponse.toLowerCase()
+		alert (`I'm sorry, can you repeat your answer`)
+			
+	}
+	if (registResponse === "yes") {
+	userName =prompt("Please select an user name")
+  
+	userMail = prompt("Please enter an email adress")
+  
+	userPassword = prompt("Please enter a password at least0 8 characters long")
+
+	let userBirthdate = prompt("Please enter your birthdate: Exp 11/07/1976")
+
+	userToken= true
+
+	alert(`Welcome to the food nerds club ${userName}!`)
+
+	} else{
+ 		alert("Maybe next time.")
+  		userToken = false
+ 	} 
+		
+		
 }
-if (registResponse.toLowerCase === "yes") {
-userName =prompt("Please select an user name")
-  
-userMail = prompt("Please enter an email adress")
-  
-userPassword = prompt("Please enter a password at least0 8 characters long")
+	
+ 
 
-let userBirthdate = prompt("Please enter your birthdate: Exp 11/07/1976")
-
-userToken= true
-
-alert(`Welcome to the food nerds club ${userName}!`)
-
-} else {
-  alert("Maybe next time.")
-  userToken = false
- } 
-
- }
 
 const userSignIn=()=>{
 	let signIntent =0
@@ -105,9 +115,10 @@ let articleStars= parseInt(prompt("Please select a number of stars between 1-5")
 
 
 registerUser()
-
+/*
 userSignIn()
 
 postComment()
 
 articleRating()
+*/
