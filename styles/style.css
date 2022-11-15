@@ -171,27 +171,67 @@ a {
 }
 
 /* Mix-in implementado para cambiar el estilo de todas las cards de imagenes que no estan featured o son del articulo principal de su respectiva página*/
+.card {
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 2.2rem;
+}
+
+.card img {
+  height: 50vh;
+  width: 100%;
+  -o-object-fit: initial;
+     object-fit: initial;
+  -o-object-position: initial;
+     object-position: initial;
+}
+.card .card-image-crop {
+  height: 50vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: initial;
+     object-position: initial;
+}
+
+.card {
+  margin-right: var(--spacing-xsmall);
+  margin-left: var(--spacing-xsmall);
+  margin-bottom: var(--spacing-xsmall);
+}
+
 @media screen and (min-width: 768px) {
-  .card {
-    margin-right: var(--spacing-xsmall);
-    margin-left: var(--spacing-xsmall);
-    margin-bottom: var(--spacing-xsmall);
+  .card .cropped-vert-img {
+    height: 50vh;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 73%;
+       object-position: 50% 73%;
   }
-  .card img {
-    height: auto;
+  .card .post-area-bottom_singlepost-img {
+    height: 50vh;
     width: 100%;
     -o-object-fit: initial;
        object-fit: initial;
     -o-object-position: initial;
        object-position: initial;
   }
-  .card .card-image-crop {
-    height: auto;
+  .card .single-post-img {
+    height: 40vh;
+    width: 100%;
+    -o-object-fit: initial;
+       object-fit: initial;
+    -o-object-position: initial;
+       object-position: initial;
+  }
+  .card #food-science_egg-img {
+    height: 50vh;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: 50% 60%;
-       object-position: 50% 60%;
+    -o-object-position: 50% 90%;
+       object-position: 50% 90%;
   }
 }
 .header-area {
@@ -737,21 +777,8 @@ main #essential-reads-featured {
   padding-top: var(--spacing-xsmall);
 }
 
-.card {
-  margin-right: var(--spacing-xsmall);
-  margin-left: var(--spacing-xsmall);
-}
-.card img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .single-post_card {
   text-align: center;
-}
-
-.single-post_card img {
-  height: auto;
 }
 
 /*Contact Page Styles*/
@@ -888,26 +915,66 @@ main #essential-reads-featured {
 }
 
 /* Mix-in implementado para cambiar el estilo de todas las cards de imagenes que no estan featured o son del articulo principal de su respectiva página*/
+.card {
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 2.2rem;
+}
+
+.card img {
+  height: 50vh;
+  width: 100%;
+  -o-object-fit: initial;
+     object-fit: initial;
+  -o-object-position: initial;
+     object-position: initial;
+}
+.card .card-image-crop {
+  height: 50vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: initial;
+     object-position: initial;
+}
+
+.card {
+  margin-right: var(--spacing-xsmall);
+  margin-left: var(--spacing-xsmall);
+  margin-bottom: var(--spacing-xsmall);
+}
+
 @media screen and (min-width: 768px) {
-  .card {
-    margin-right: var(--spacing-xsmall);
-    margin-left: var(--spacing-xsmall);
-    margin-bottom: var(--spacing-xsmall);
+  .card .cropped-vert-img {
+    height: 50vh;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 73%;
+       object-position: 50% 73%;
   }
-  .card img {
-    height: auto;
+  .card .post-area-bottom_singlepost-img {
+    height: 50vh;
     width: 100%;
     -o-object-fit: initial;
        object-fit: initial;
     -o-object-position: initial;
        object-position: initial;
   }
-  .card .card-image-crop {
-    height: auto;
+  .card .single-post-img {
+    height: 40vh;
+    width: 100%;
+    -o-object-fit: initial;
+       object-fit: initial;
+    -o-object-position: initial;
+       object-position: initial;
+  }
+  .card #food-science_egg-img {
+    height: 50vh;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: 50% 60%;
-       object-position: 50% 60%;
+    -o-object-position: 50% 90%;
+       object-position: 50% 90%;
   }
 }/*# sourceMappingURL=style.css.map */

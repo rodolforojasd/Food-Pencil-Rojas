@@ -104,29 +104,12 @@ row-gap: var(--spacing-medium);
     padding-top: var(--spacing-xsmall);
 }
 
-.card{
-margin-right: var(--spacing-xsmall) ;
-margin-left: var(--spacing-xsmall);
-    img{
-        object-fit: cover;
-    }
 
-}
 
 .single-post_card{
     text-align: center;
 
 }
-
-
-
-.single-post_card img{  
-    height:auto;  
-}
-
-
-
-
 
 
 /*Contact Page Styles*/
@@ -194,6 +177,7 @@ margin-left: var(--spacing-xsmall);
     }
     
 
+
     #building-blocks{
     padding-left: var(--spacing-xsmall);
     padding-right: var(--spacing-xsmall);
@@ -229,11 +213,6 @@ margin-left: var(--spacing-xsmall);
         background-color: var(--primary-color);
         padding-top:var(--spacing-medium) ;
       }
-
-    
-
-
-
 
     #contact-form{
         padding-left: var(--spacing-medium);

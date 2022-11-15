@@ -94,26 +94,39 @@ $style-spacings:(spacingXLarge:6rem, spacingLarge:2.4rem, spacingMedium:2.2rem, 
     
 }
 
+%card-default{
+    margin-right: var(--spacing-xsmall) ;
+    margin-left: var(--spacing-xsmall);
+    margin-bottom: var(--spacing-xsmall);
+}
+
+.card{
+    @extend %card-default;
+}
+
+
 
 @media screen and (min-width: 768px){
 
-    %card-default{
-        margin-right: var(--spacing-xsmall) ;
-        margin-left: var(--spacing-xsmall);
-        margin-bottom: var(--spacing-xsmall);
-    }
-
+    
 
     .card{
-        @extend %card-default;
-        img{
-        @include cardImgStyle(auto, initial, initial);
+
+        .cropped-vert-img{
+            
+            @include cardImgStyle(50vh, cover, 50% 73%);
+        } 
+        .post-area-bottom_singlepost-img{
+            @include cardImgStyle(50vh, initial, initial);
         }
-        .card-image-crop{
-        @include cardImgStyle(auto, cover, 50% 60%);
+        .single-post-img{
+            @include cardImgStyle(40vh, initial, initial)
         }
-        
+
+        #food-science_egg-img{
+             @include cardImgStyle(50vh, cover, 50% 90%);
+        }
     }
+}
 
     
-}
