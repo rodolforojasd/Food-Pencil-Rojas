@@ -767,6 +767,41 @@ main #essential-reads-featured {
   padding-bottom: var(--spacing-medium);
 }
 
+#conversor-wrapper {
+  display: block;
+  margin: var(--spacing-medium);
+  padding: var(--spacing-small);
+}
+#conversor-wrapper .ingredient-wrapper display:block #ingredient-selected {
+  font-size: var(--text-medium);
+}
+#conversor-wrapper .ingredient-wrapper #ingredient_input {
+  width: 80vw;
+}
+#conversor-wrapper .ingredient-wrapper #ingredient-list {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#conversor-wrapper .ingredient-wrapper #ingredient-list li {
+  display: none;
+}
+#conversor-wrapper .ingredient-wrapper #ingredient-list li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+}
+#conversor-wrapper .calculator-wrapper {
+  display: inline-block;
+  width: 30vw;
+}
+
 /*@media screen and (min-width: 400px){
     .post-area-bottom{
         .post-area-bottom_singlepost{

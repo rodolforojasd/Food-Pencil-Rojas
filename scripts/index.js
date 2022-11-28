@@ -1,199 +1,178 @@
 
-class User {
-	constructor(userId, userName, userMail, userFullName, userPassword, userAge, userRegistered, userSignedIn){
-		this.userId = 0
-		this.userName = userName;
-		this.userMail = userMail;
-		this.userfullName = userFullName;
-		this.userPassword = userPassword;
-		this.userAge = userAge.parseInt(userAge);
-		this.userRegistered = false;
-		this.userSignedIn= false;
-	}
+// class User {
+// 	constructor(userId, userName, userMail, userFullName, userPassword, userAge, userRegistered, userSignedIn){
+// 		this.userId = 0
+// 		this.userName = userName;
+// 		this.userMail = userMail;
+// 		this.userfullName = userFullName;
+// 		this.userPassword = userPassword;
+// 		this.userAge = userAge.parseInt(userAge);
+// 		this.userRegistered = false;
+// 		this.userSignedIn= false;
+// 	}
                                            
 
-}
+// }
 
 
-const users = []  
-console.log(users)
-const  registerUser = () => {
-	debugger
-	let registResponse = ""
-	while (registResponse !== "yes" && registResponse !== "no"){
-		registResponse = prompt("Do you want to register?: Yes/No")	
-		registResponse = registResponse.toLowerCase()
-		alert (`I'm sorry, can you repeat your answer`)
+// const users = []  
+// console.log(users)
+// const  registerUser = () => {
+// 	debugger
+// 	let registResponse = ""
+// 	while (registResponse !== "yes" && registResponse !== "no"){
+// 		registResponse = prompt("Do you want to register?: Yes/No")	
+// 		registResponse = registResponse.toLowerCase()
+// 		alert (`I'm sorry, can you repeat your answer`)
 			
-	}
+// 	}
 
-	if (registResponse === "yes") {
-	let userId = 0	
-	if (users.lenght === 0){
-		userId = 1 ;
-	}else{
-		userId = users.lenght + 1 ;
-	}
+// 	if (registResponse === "yes") {
+// 	let userId = 0	
+// 	if (users.lenght === 0){
+// 		userId = 1 ;
+// 	}else{
+// 		userId = users.lenght + 1 ;
+// 	}
 
-	let userName = prompt("Please select an user name")
+// 	let userName = prompt("Please select an user name")
 
-	let userFirstName = prompt("Please enter your First Name")
-	let userLastName = prompt("Please enter your last name")
+// 	let userFirstName = prompt("Please enter your First Name")
+// 	let userLastName = prompt("Please enter your last name")
 
-	let userFullName = userFirstName +" "+ userLastName;
+// 	let userFullName = userFirstName +" "+ userLastName;
 
   
-	let userMail = prompt("Please enter an email adress")
+// 	let userMail = prompt("Please enter an email adress")
   
-	let userPassword = prompt("Please enter a password at least0 8 characters long")
+// 	let userPassword = prompt("Please enter a password at least0 8 characters long")
 
-	let userBirthdate = prompt("Please enter your birthdate: Exp 11/07/1976")
+// 	let userBirthdate = prompt("Please enter your birthdate: Exp 11/07/1976")
 
-	let userRegistered= true
+// 	let userRegistered= true
 
-	let newUser = new User ({ userId: `${userId}`, userName:`${userName}`, userMail: `${userMail}`, userPassword:`${userPassword}`, userFullName:`${userFullName}` , userAge:`${userAge}`, userRegistered:`${userRegistered}`, userSignedIn: false});
-	users.push(newUser)
+// 	let newUser = new User ({ userId: `${userId}`, userName:`${userName}`, userMail: `${userMail}`, userPassword:`${userPassword}`, userFullName:`${userFullName}` , userAge:`${userAge}`, userRegistered:`${userRegistered}`, userSignedIn: false});
+// 	users.push(newUser)
 
 
-	alert(`Welcome to the food nerds club ${userName}!`)
+// 	alert(`Welcome to the food nerds club ${userName}!`)
 
-	} else{
- 		alert("Maybe next time.")
-  		userRegistered = false
- 	} 
+// 	} else{
+//  		alert("Maybe next time.")
+//   		userRegistered = false
+//  	} 
 		
 		
-}
+// }
 	
  
 
 
-const signIn=()=>{
-	let signIntent =0
-	let userNameCheck=0
-	let passwordCheck=0
+// const signIn=()=>{
+// 	let signIntent =0
+// 	let userNameCheck=0
+// 	let passwordCheck=0
 	
 
-	if(User.userRegistered= true){
+// 	if(User.userRegistered= true){
 		
-		while (signIntent !== 1 && signIntent !== 2){
-			signIntent= parseInt(prompt("Do you want to sign-in?: 1. Yes/ 2.No"))
-			alert(`Sorry I did not catch that!`)
-		}
-		if (signIntent === 1){
-			for (let i=0; i<10; i++){
-				if(User.userName===userNameCheck || User.userMail===userNameCheck &&  User.userPassword===passwordCheck) break
-				if(User.userName!==userNameCheck || User.userMail!==userNameCheck &&  User.userPassword!==passwordCheck){
-					userCheck = prompt("Please enter your username or mail address ")
-					passwordCheck = prompt("Please enter your password")
-					alert(`The password or user info is not correct, please try again.`)
+// 		while (signIntent !== 1 && signIntent !== 2){
+// 			signIntent= parseInt(prompt("Do you want to sign-in?: 1. Yes/ 2.No"))
+// 			alert(`Sorry I did not catch that!`)
+// 		}
+// 		if (signIntent === 1){
+// 			for (let i=0; i<10; i++){
+// 				if(User.userName===userNameCheck || User.userMail===userNameCheck &&  User.userPassword===passwordCheck) break
+// 				if(User.userName!==userNameCheck || User.userMail!==userNameCheck &&  User.userPassword!==passwordCheck){
+// 					userCheck = prompt("Please enter your username or mail address ")
+// 					passwordCheck = prompt("Please enter your password")
+// 					alert(`The password or user info is not correct, please try again.`)
 					
-				}
-			}
-			for (const el of users){
-				if(el.userName === userNameCheck || el.userMail === userNameCheck && el.userPassword === passwordCheck){
-					el.userSignedIn = true
-				}
-			}
-			alert(`Thank you for signing-in ${userNameCheck}!`)
-		}
-	}
-	else{
-		alert(`Ok. Maybe later.`)
-	}
+// 				}
+// 			}
+// 			for (const el of users){
+// 				if(el.userName === userNameCheck || el.userMail === userNameCheck && el.userPassword === passwordCheck){
+// 					el.userSignedIn = true
+// 				}
+// 			}
+// 			alert(`Thank you for signing-in ${userNameCheck}!`)
+// 		}
+// 	}
+// 	else{
+// 		alert(`Ok. Maybe later.`)
+// 	}
 				
-}
+// }
 	
 
 
-const checkUserAccess = () =>{
-while (accessGranted !== User.userRegistered) {
-	let accessGranted = 0
-	if (User.userRegistered === true && User.userSignedIn===true){
-	 accessGranted= userAccess
-	}else if (User.userRegistered === true && User.userSignedIn === false){
-		signIn()
-	} else{
-		registerUser()
-	}
+// const checkUserAccess = () =>{
+// while (accessGranted !== User.userRegistered) {
+// 	let accessGranted = 0
+// 	if (User.userRegistered === true && User.userSignedIn===true){
+// 	 accessGranted= userAccess
+// 	}else if (User.userRegistered === true && User.userSignedIn === false){
+// 		signIn()
+// 	} else{
+// 		registerUser()
+// 	}
 
-}
-}
-
-
-
-
-
-
-const postComment =() => {
-checkUserAccess()
-let userComment = prompt("Write your comment:?")
-console.log(userComment)
-}
-
-
-
-const articleRating = (userRating)=> {
-checkUserAccess() 
-while(isNaN(userRating) && userRating > 5 && userRating < 1) {
-	alert("Please enter a valid number")
-	articleStars= parseInt(prompt("Please select a number of stars between 1-5"))
-}
-return articleStars
-
-}
+// }
+// }
 
 
 
 
 
 
+// const postComment =() => {
+// checkUserAccess()
+// let userComment = prompt("Write your comment:?")
+// console.log(userComment)
+// }
 
 
-registerUser()
 
-userSignIn()
+// const articleRating = (userRating)=> {
+// checkUserAccess() 
+// while(isNaN(userRating) && userRating > 5 && userRating < 1) {
+// 	alert("Please enter a valid number")
+// 	articleStars= parseInt(prompt("Please select a number of stars between 1-5"))
+// }
+// return articleStars
 
-postComment()
+// }
 
-articleRating()
+
+
+
+
+
+
+
+// registerUser()
+
+// userSignIn()
+
+// postComment()
+
+// articleRating()
 
 
 class Ingredient{
 	constructor(name, gram, cup, ml){
-		this.name = name.toLowerCase();
-		this.gram = parseToFloat(this.gram);
-		this.cup = parseToFloat(this.cups);
-		this.ml = this.cup*240;
+		this.name = name;
+		this.gram = parseFloat(gram);
+		this.cup = parseFloat(cup);
+		this.ml = cup*240;
 		
 	}
 	
 }
-
-
-function ingredientsConversTool(ingredient, unit1, unit2, quantity ){
-const litreToMl =[1000,"l"] ;
-const liquidOzToMl = [30, "liquid oz"];
-const mlToMl = [1, "ml"];
-const pintToMl=[480, "pint"] ;
-const tbsToMl= [14.8, "tbsp"];
-const tspToMl =[5, "tsp"] ;
-const quartToML = [946.353, "quart"];
-const gallonToML =[3785.41, "gallon"] ;
-const cupToMl = [240, "cup"];
-const grToGr = [1, "gr"];
-const kgToGr = [1000, "kg"];
-const lbToGr =[480, "lb"] ;
-const ozToGr = [30, "oz"];
-
-const volumeUnits = [litreToMl, liquidOzToMl, mlToMl, pintToMl, tbsToMl, tspToMl,quartToML, gallonToML,cupToMl ]
-const weightUnits = [grToGr,kgToGr,lbToGr,ozToGr]
-
-let amount = parseToFloat(quantity)
-
 const  ingredients = []
 
-ingredients.push(new Ingredient("00 Flour", "116" ,"1.000")) ;
+
+ingredients.push(new Ingredient("Bread Flour", "116" ,"1.000")) ;
 ingredients.push(new Ingredient("Agave syrup", "84" ,"0.250" )) ;
 ingredients.push(new Ingredient("All-Purpose Flour", "120" ,"1.000" )) ;
 ingredients.push(new Ingredient("Almond Flour", "96" ,"1.000" )) ;
@@ -493,60 +472,290 @@ ingredients.push(new Ingredient("Yeast (instant)", "9" ,"0.060" )) ;
 ingredients.push(new Ingredient("Yogurt", "227" ,"1.000" )) ;
 ingredients.push(new Ingredient("Zucchini (shredded)", "121 to 150" ,"1.000" )) ;
 
-const answers = ingredients.filter((el) => el.name.includes(ingredient));
 
-const volumeConversions = () => {
-	let firstUnit = volumeUnits.find((el) => el[1]=== unit1)
-	let secondUnit = volumeUnits.find((el) => el[1]=== unit2)
-	answers.forEach((answer) =>{
-		let result = amount*firstUnit[0]/secondUnit[0]
-		console.log(`${amount} of ${answer.name} is ${result}\n`)
-	}) 	
+
+
+const ingredientList = document.getElementById("ingredient-list")
+ingredients.forEach((ingredient)=>{
+	ingredientList. innerHTML +=`
+	<li class="conversor_hidden-search-item">
+	<a href="#">${ingredient.name}</a>
+	</li>
+	`
+})
+
+
+
+function searchIngredient() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("ingredient-input");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("ingredient-list");
+	ul.style.display= "block"
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1 && filter!== "") {
+            li[i].style.display = "block";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+
 }
 
-const weightConversions = () => {
-	let firstUnit = weightUnits.find((el) => el[1]=== unit1)
-	let secondUnit = weightUnits.find((el) => el[1]=== unit2)
-	answers.forEach((answer) =>{
-		let result = amount*firstUnit[0]/secondUnit[0]
-		console.log(`${amount} of ${answer.name} is ${result}\n`)
-	}) 
-	
-}
 
-const weightToVolume = () => {
-	let firstUnit = weightUnits.find((el) => el[1]=== unit1)
-	let secondUnit = volumeUnits.find((el) => el[1]=== unit2)
 
-	answers.forEach((answer) =>{
-		let result = amount* answer.cup *240*firstUnit[0]/answer.gram *secondUnit[0]
-		console.log(`${amount} of ${answer.name} is ${result} \n`)
+
+
+/*Me cuesta entender cual es el antipatrón aca, debo crear las variables constantes 
+en la función para que no ocupen un espacio en memoria o hacer formulas más pequeñas que se llamen pero no se creean*/
+
+const conversionMiniApp = document.getElementById("conversor-wrapper")
+conversionMiniApp.addEventListener("load",ingredientsConversTool())
+
+
+
+
+
+
+
+function ingredientsConversTool(){
+
+	const litreToMl =[1000,"l"] ;
+	const liquidOzToMl = [30, "liquid oz"];
+	const mlToMl = [1, "ml"];
+	const pintToMl=[480, "pint"] ;
+	const tbsToMl= [14.8, "tbsp"];
+	const tspToMl =[5, "tsp"] ;
+	const quartToML = [946.353, "quart"];
+	const gallonToML =[3785.41, "gallon"] ;
+	const cupToMl = [240, "cup"];
+	const grToGr = [1, "gr"];
+	const kgToGr = [1000, "kg"];
+	const lbToGr =[480, "lb"] ;
+	const ozToGr = [30, "oz"];
+	let firstUnit, secondUnit, unit1,unit2,amount, result, ingredientToConvert
+
+
+	const volumeUnits = [litreToMl, liquidOzToMl, mlToMl, pintToMl, tbsToMl, tspToMl,quartToML, gallonToML,cupToMl ]
+	const weightUnits = [grToGr,kgToGr,lbToGr,ozToGr]
+	const allUnits = volumeUnits.concat(weightUnits)
+	const volumeLabels = volumeUnits.map(unit => unit[1])
+	const weightLabels =  weightUnits.map(unit => unit[1])
+	const unitLabels = volumeLabels.concat(weightLabels)
+	const ingredientsList = ingredients.map(e =>  e.name)
+	console.log(unitLabels)
+	const unitBottomL = document.getElementById("unit-l") 
+	const unitBottomR = document.getElementById("unit-r")
+
+	unitLabels.forEach((unitLabel) =>{
+		unitBottomL.innerHTML += `
+		<option>${unitLabel}</option>
+		`
+		unitBottomR.innerHTML +=`
+		<option>${unitLabel}</option>
+		`
 	})
-}
 
-const volumeToWeight = () => {
-	let firstUnit = volumeUnits.find((el) => el[1]=== unit1)
-	let secondUnit = weightUnits.find((el) => el[1]=== unit2)
 	
-	answers.forEach((answer) =>{
-		let result = amount* answer.gram * firstUnit[0]/answer.cup *240 * secondUnit[0]
-		console.log(`${amount} of ${answer.name} is ${result} \n`)
-	})
 
-	if (volumeUnits.some((el) => el[1] === unit1) && volumeUnits.some((el) => el[1] === unit2)){
-		volumeConversions()
-	}
-	else if (weightUnits.some((el) => el[1] === unit1) && weightUnits.some((el) => el[1] === unit2)){
-		weightConversions()
-	}
-	else if ( weightUnits.some((el) => el[1] === unit1) && volumeUnits.some((el) => el[1] === unit2)){
-		weightToVolume()
-	}
-	else if(volumeUnits.some((el) => el[1] === unit1) && weightUnits.some((el) => el[1] === unit2)){
-		volumeToWeight()
-	}
-	else{
-		alert("you need to enter valid values, you are welcome to try again")
-	}
+	
+	
+
+
+
+	let ingredientSelected = false
+
+	let ingredientList = document.getElementById("ingredient-list");
+	ingredientList.addEventListener("click", (e) => {	
+		ingredientSelected = e.target.textContent
+		document.getElementById("ingredient-selected").innerHTML= ingredientSelected
+		document.getElementById("ingredient-input").value =""
+		document.getElementById("ingredient-list").style.display= "none"
+	} )
+
+	
+	let unitL= document.getElementById("unit-l")
+	let unitR= document.getElementById("unit-l")
+	let inputL= document.getElementById("amount-input-l")
+	let inputR= document.getElementById("amount-input-r")
+
+	unitsAndAmounts= document.getElementById("units-amount-wrapper")
+	unitsAndAmounts.addEventListener("change",  (e) => {
+
+
+		if (e.target.id.toLowerCase()==="unit-l"){
+			unit1=e.target.value
+			console.log(unit1)
+			result= convertIngredient()
+			console.log(result)
+			
+		}else if(e.target.id.toLowerCase()==="unit-r"){
+			unit2=e.target.value
+			console.log(unit2)
+			result= convertIngredient()
+
+		}else return
+
+		})
+
+		unitsAndAmounts.addEventListener("input",  (e) => {
+		if (e.target.id.toLowerCase()==="amount-input-l"){
+			amount= e.target.value
+			inputR.value=""
+			console.log(amount)
+			result= convertIngredient()
+			inputR.value=result
+		}else if (e.target.id.toLowerCase()==="amount-input-r"){
+			[unit1,unit2]=[unit2,unit1];
+			inputL.value=""
+			amount= e.target.value
+			result= convertIngredient()
+			inputL.value= result
+		}else{
+			return
+		}
+		
+		
+
+
+
+	})
+	
+		
+	function convertIngredient( ){
+		debugger
+		console.log(amount)	
+		if(unit1===undefined||unit2===undefined||ingredientSelected===false||isNaN(amount)){
+			return ""
+		}else{
+			ingredientToConvert=  ingredients.filter((ingredient)=> ingredient.name.includes(ingredientSelected))
+			console.log(ingredientToConvert)
+			console.log(firstUnit)
+			console.log(secondUnit)
+			firstUnit = allUnits.find((el) => el[1] === unit1)
+			secondUnit = allUnits.find((el) => el[1] === unit2)
+			if (volumeUnits.some((el) => el[1] === unit1) && volumeUnits.some((el) => el[1] === unit2)||weightUnits.some((el) => el[1] === unit1) && weightUnits.some((el) => el[1] === unit2)){
+				return (amount*firstUnit[0]/secondUnit[0]).toFixed(2)	
+		   }else if ( weightUnits.some((el) => el[1] === unit1) && volumeUnits.some((el) => el[1] === unit2)){
+					return (amount* ingredientToConvert.ml*firstUnit[0]/ingredientToConvert.gram *secondUnit[0]).toFixed(2)
+		   }else{
+					return (amount* ingredientToConvert.gram * firstUnit[0]/ingredientToConvert.ml *secondUnit[0]).toFixed(2)
+		   }
+		   
+		}
+	}	
+	
+	
+	
+	
+	
+
+
 }
-}
+
+
+
+
+
+
+// class Article{
+// 	constructor(title, img, caption, url, tag, section){
+// 		this.title = title
+// 		this.imgUrl= imgUrl
+// 		this.caption= caption
+// 		this.url= url
+// 		this.tag = {
+// 			tagName : tageName,
+// 			tagUrl : tagUrl
+// 		}
+// 		this.section = {
+// 			homeId:homeId,
+// 			pageId: pageId
+// 		}
+// 	}}
+	
+
+
+// class NavItem{ 
+// 	constructor(img, title, page, pageUrl){
+// 		this.imgUrl = imgUrl
+// 		this.title = title
+// 		this.page =page
+// 		this.pageUrl =pageUrl
+// 	}
+// }
+
+
+// const articles =[]
+// const chapterItems =[]
+// const sectionsIds = []
+// const tags = []
+
+// const chapterEquipment = document.getElementById("chapternav-items_equipment") 
+// const chapterFoodScience = document.getElementById("chapternav-items_foodscience")  
+// const chapterRecipes = document.getElementById("chapternav-items_recipes") 
+
+
+
+
+// chapterItems.forEach((chapItem) => {
+// 	if (chapItem.page === "equipment"){
+// 		navItemEquipment.innerHTML +=`
+// 		<li class="chapter-item">
+//                     <a href= "../pages/${chapItem.page}.html">
+//                         <figure >
+//                             <image src=${chapItem.imgUrl}></image>
+//                         </figure>
+//                         <span> ${chapItem.title}</span>
+                        
+//                     </a>
+// 		</li>
+// 		`
+// 	}
+// 	else if(chapItem.page === "food science"){
+// 		navItemEquipment.innerHTML +=`
+// 		<li class="chapter-item">
+//                     <a href= "../pages/${chapItem.page}.html">
+//                         <figure >
+//                             <image src=${chapItem.imgUrl}></image>
+//                         </figure>
+//                         <span> ${chapItem.title}</span>
+                        
+//                     </a>
+// 		</li>
+// 		`
+// 	}
+// 	else{
+// 		navItemEquipment.innerHTML +=`
+// 		<li class="chapter-item">
+//                     <a href= "../pages/${chapItem.page}.html">
+//                         <figure >
+//                             <image src=${chapItem.imgUrl}></image>
+//                         </figure>
+//                         <span> ${chapItem.title}</span>
+                        
+//                     </a>
+// 		</li>
+// 		`
+// 	} 
+// })
+
+
+// articles
+
+
+//  <div class="card" style="width: 18rem;">
+//   <img src="..." class="card-img-top" alt="...">
+//   <div class="card-body">
+//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+//   </div>
+// </div> 
+
+
+
+
+// conversor calculator
+
