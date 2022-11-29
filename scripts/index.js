@@ -159,16 +159,19 @@
 // articleRating()
 
 
+
 class Ingredient{
 	constructor(name, gram, cup, ml){
+
 		this.name = name;
 		this.gram = parseFloat(gram);
 		this.cup = parseFloat(cup);
 		this.ml = cup*240;
-		
+
 	}
 	
 }
+
 const  ingredients = []
 
 
@@ -660,102 +663,120 @@ function ingredientsConversTool(){
 
 
 
+const  ingredients = []
 
-// class Article{
-// 	constructor(title, img, caption, url, tag, section){
-// 		this.title = title
-// 		this.imgUrl= imgUrl
-// 		this.caption= caption
-// 		this.url= url
-// 		this.tag = {
-// 			tagName : tageName,
-// 			tagUrl : tagUrl
-// 		}
-// 		this.section = {
-// 			homeId:homeId,
-// 			pageId: pageId
-// 		}
-// 	}}
-	
+ingredients.push(new Ingredient("Coconut milk",241, 1.000)) ;
+ingredients.push(new Ingredient("Dried milk",28, 0.250)) ;
+ingredients.push(new Ingredient("Milk vaporated",113, 0.500)) ;
+ingredients.push(new Ingredient("Milk",227, 1.000)) ;
+ingredients.push(new Ingredient("Milk condensed",78, 0.250)) ;
+ingredients.push(new Ingredient("Yogurt",227, 1.000)) ;
+ingredients.push(new Ingredient("Baking powder",4, 0.021)) ;
+ingredients.push(new Ingredient("Baking soda",3, 0.010)) ;
+ingredients.push(new Ingredient("Butter",113, 0.483)) ;
+ingredients.push(new Ingredient("Buttermilk",227, 1.000)) ;
+ingredients.push(new Ingredient("Peanut butter",135, 0.500)) ;
+ingredients.push(new Ingredient("Coconut oil",113, 0.500)) ;
+ingredients.push(new Ingredient("Olive oil",50, 0.250)) ;
+ingredients.push(new Ingredient("Vegetable oil",198, 1.000)) ;
+ingredients.push(new Ingredient("All-Purpose Flour",120, 1.000)) ;
+ingredients.push(new Ingredient("Almond Flour",96, 1.000)) ;
+ingredients.push(new Ingredient("Soy flour",35, 0.250)) ;
+ingredients.push(new Ingredient("Whole Grain Flour",113, 1.000)) ;
+ingredients.push(new Ingredient("Water",227, 1.000)) ;
+ingredients.push(new Ingredient("Egg",50, 0.210)) ;
+ingredients.push(new Ingredient("Egg whites ",35, 0.121)) ;
+ingredients.push(new Ingredient("Egg yolk",14, 0.080)) ;
+ingredients.push(new Ingredient("Brown sugar",213, 1.000)) ;
+ingredients.push(new Ingredient("Powdered Sugar",227, 2.000)) ;
+ingredients.push(new Ingredient("Sugar",198, 1.000)) ;
+ingredients.push(new Ingredient("Instant Yeast",6, 0.042)) ;
+ingredients.push(new Ingredient("Heavy Cream",227, 1.000)) ;
+ingredients.push(new Ingredient("Cream cheese",227, 1.000)) ;
+ingredients.push(new Ingredient("Cream of coconut",142, 0.500)) ;
+ingredients.push(new Ingredient("Sour cream",227, 1.000)) ;
+ingredients.push(new Ingredient("Honey",21, 0.060)) ;
+
+function ingredientsConversTool(){
+
+	const litreToMl =[1000,"l"] ;
+	const liquidOzToMl = [30, "liquid oz"];
+	const mlToMl = [1, "ml"];
+	const pintToMl=[480, "pint"] ;
+	const tbsToMl= [14.8, "tbsp"];
+	const tspToMl =[5, "tsp"] ;
+	const quartToML = [946.353, "quart"];
+	const gallonToML =[3785.41, "gallon"] ;
+	const cupToMl = [240, "cup"];
+	const grToGr = [1, "gr"];
+	const kgToGr = [1000, "kg"];
+	const lbToGr =[480, "lb"] ;
+	const ozToGr = [30, "oz"];
+	let firstUnit= 0
+	let secondUnit=0
+
+	const volumeUnits = [litreToMl, liquidOzToMl, mlToMl, pintToMl, tbsToMl, tspToMl,quartToML, gallonToML,cupToMl ]
+	const weightUnits = [grToGr,kgToGr,lbToGr,ozToGr]
+	const allUnits = volumeUnits.concat(weightUnits)
+	const volumeLabels = volumeUnits.map(unit => unit[1])
+	const weightLabels =  weightUnits.map(unit => unit[1])
+	const unitLabels = volumeLabels.concat(weightLabels)
+	const ingredientsList = ingredients.map(e =>  e.name)
+
+	let ingredient ="text"
+	let ingredientToConvert ="text"
+	ingredient = prompt("Please enter the name of the  ingredient you want to convert")
+	ingredientToConvert = ingredient.toLowerCase()
+	while((ingredients.find((el) => el.name === ingredientToConvert)) === undefined){
+		
+		alert(`This is the list of ingredients we have available : ${ingredientsList }`)
+		
+		ingredient = prompt("Please enter the name of the ingredient you want to convert")
+		ingredientToConvert = ingredient.toLowerCase()
+	}
+
+	let quantity = prompt("Please enter the amount you want to convert in numbers, you can use decimals (.)")
+
+	while (isNaN(quantity)) {
+		alert("I'm sorry. You need to enter a valid number")
+		quantity = prompt("Please enter the amount you want to convert in numbers, you can use decimals (.)")
+	}
+
+	let amount = parseFloat(quantity)
+	let unit1 = prompt (`Please enter the unit you want to convert from: ${unitLabels}`)
+	let unit2 = prompt (`Please enter the unit you want to convert to: ${unitLabels}`)
+	// el mismo problema de some puedes tratar de cambiarlo por find o includes
+	while((unitLabels.find((unit)=> unit === unit1))===undefined || (unitLabels.find((unit)=> unit === unit2))=== undefined ){
+		alert("Please enter valid mesurements to continue")
+		unit1 = prompt (`Please enter the unit you want to convert from: ${unitLabels}`)
+		unit2 = prompt (`Please enter the unit you want to convert to: ${unitLabels}`)
+	}
+
+	const answers = ingredients.filter((el) => el.name.includes(ingredient));
+
+ 	console.log (answers)
+ 	firstUnit = allUnits.find((el) => el[1] === unit1)
+	secondUnit = allUnits.find((el) => el[1] === unit2)
+	console.log(firstUnit)
+	console.log(secondUnit[0])
 
 
-// class NavItem{ 
-// 	constructor(img, title, page, pageUrl){
-// 		this.imgUrl = imgUrl
-// 		this.title = title
-// 		this.page =page
-// 		this.pageUrl =pageUrl
-// 	}
-// }
+	if (volumeUnits.some((el) => el[1] === unit1) && volumeUnits.some((el) => el[1] === unit2)||weightUnits.some((el) => el[1] === unit1) && weightUnits.some((el) => el[1] === unit2)){
+		answers.forEach((answer) => {
+			let result = amount*firstUnit[0]/secondUnit[0]
+			alert(`${amount}${unit1} of ${answer.name} equals to ${result}${unit2}\n`)
+		})}else if ( weightUnits.some((el) => el[1] === unit1) && volumeUnits.some((el) => el[1] === unit2)){
+			answers.forEach((answer) =>{
+				let result = amount* answer.ml*firstUnit[0]/answer.gram *secondUnit[0]
+				alert(`${amount}${unit1} of ${answer.name} equals to ${result}${unit2} \n`)
+			})}else{
+				answers.forEach((answer) =>{
+					let result = amount* answer.gram * firstUnit[0]/answer.ml * secondUnit[0]
+					alert(`${amount}${unit1} of ${answer.name} equals to ${result} ${unit2} \n`)
+				})}
 
 
-// const articles =[]
-// const chapterItems =[]
-// const sectionsIds = []
-// const tags = []
+}
 
-// const chapterEquipment = document.getElementById("chapternav-items_equipment") 
-// const chapterFoodScience = document.getElementById("chapternav-items_foodscience")  
-// const chapterRecipes = document.getElementById("chapternav-items_recipes") 
-
-
-
-
-// chapterItems.forEach((chapItem) => {
-// 	if (chapItem.page === "equipment"){
-// 		navItemEquipment.innerHTML +=`
-// 		<li class="chapter-item">
-//                     <a href= "../pages/${chapItem.page}.html">
-//                         <figure >
-//                             <image src=${chapItem.imgUrl}></image>
-//                         </figure>
-//                         <span> ${chapItem.title}</span>
-                        
-//                     </a>
-// 		</li>
-// 		`
-// 	}
-// 	else if(chapItem.page === "food science"){
-// 		navItemEquipment.innerHTML +=`
-// 		<li class="chapter-item">
-//                     <a href= "../pages/${chapItem.page}.html">
-//                         <figure >
-//                             <image src=${chapItem.imgUrl}></image>
-//                         </figure>
-//                         <span> ${chapItem.title}</span>
-                        
-//                     </a>
-// 		</li>
-// 		`
-// 	}
-// 	else{
-// 		navItemEquipment.innerHTML +=`
-// 		<li class="chapter-item">
-//                     <a href= "../pages/${chapItem.page}.html">
-//                         <figure >
-//                             <image src=${chapItem.imgUrl}></image>
-//                         </figure>
-//                         <span> ${chapItem.title}</span>
-                        
-//                     </a>
-// 		</li>
-// 		`
-// 	} 
-// })
-
-
-// articles
-
-
-//  <div class="card" style="width: 18rem;">
-//   <img src="..." class="card-img-top" alt="...">
-//   <div class="card-body">
-//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//   </div>
-// </div> 
-
-
-
-
-// conversor calculator
+ingredientsConversTool()
 

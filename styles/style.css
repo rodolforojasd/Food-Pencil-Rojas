@@ -172,6 +172,29 @@ a {
 
 /* Mix-in implementado para cambiar el estilo de todas las cards de imagenes que no estan featured o son del articulo principal de su respectiva página*/
 .card {
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 2.2rem;
+}
+
+.card img {
+  height: 50vh;
+  width: 100%;
+  -o-object-fit: initial;
+     object-fit: initial;
+  -o-object-position: initial;
+     object-position: initial;
+}
+.card .card-image-crop {
+  height: 50vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: initial;
+     object-position: initial;
+}
+
+.card {
   margin-right: var(--spacing-xsmall);
   margin-left: var(--spacing-xsmall);
   margin-bottom: var(--spacing-xsmall);
@@ -927,6 +950,29 @@ main #essential-reads-featured {
 }
 
 /* Mix-in implementado para cambiar el estilo de todas las cards de imagenes que no estan featured o son del articulo principal de su respectiva página*/
+.card {
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 2.2rem;
+}
+
+.card img {
+  height: 50vh;
+  width: 100%;
+  -o-object-fit: initial;
+     object-fit: initial;
+  -o-object-position: initial;
+     object-position: initial;
+}
+.card .card-image-crop {
+  height: 50vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: initial;
+     object-position: initial;
+}
+
 .card {
   margin-right: var(--spacing-xsmall);
   margin-left: var(--spacing-xsmall);
